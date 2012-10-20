@@ -275,7 +275,7 @@ Entity.prototype.outsideScreen = function() {
 function Background(game, x, y)
 {
 	Entity.call(this, game, x, y)
-	this.FlowBG= ASSET_MANAGER.getAsset('images/LoopStream_peters.png');
+	this.FlowBG= ASSET_MANAGER.getAsset('images/LoopStream_peters2.png');
 	this.StaticBG= ASSET_MANAGER.getAsset('images/ConstantStreamGradient.png');
 	this.x = 0;
 	this.y = 0;
@@ -586,7 +586,7 @@ var doneSwitch = false;
 ASSET_MANAGER.queueDownload('images/ConstantStreamGradient.png');
 ASSET_MANAGER.queueDownload('images/bg_menu.png');
 ASSET_MANAGER.queueDownload('images/LoopStream.png');
-ASSET_MANAGER.queueDownload('images/LoopStream_peters.png');
+ASSET_MANAGER.queueDownload('images/LoopStream_peters2.png');
 ASSET_MANAGER.queueDownload('images/glimmer.png');
 ASSET_MANAGER.queueDownload('images/Picture1.png');
 ASSET_MANAGER.queueDownload('images/Title1.png');
