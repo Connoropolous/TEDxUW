@@ -1,0 +1,617 @@
+html { overflow: -moz-scrollbars-vertical; }
+body, html {
+  height: 100%;
+  margin: 0px;
+  padding: 0px;
+  background-image: url(../images/top_banner_bg.jpg);
+  background-repeat: repeat-x;
+  background-color: #ffffff;
+}
+body {
+  min-width: 100%; /* Doesn't work in IE */
+}
+.clear { clear: both; }
+#container {
+  min-height: 100%;
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+  background-image: url(../images/left_bg.jpg);
+  background-repeat: repeat-y;
+  position: relative;
+}
+* html #container {
+  height: 100%; /*** IE doesn't support min-height, but instead it handles height as min-height so we need to hack the height ***/
+}
+#header {
+  height: 60px;
+  position: relative;
+  text-align: left;
+  background-color: #646464;
+}
+#header_row {
+  height: 18px;
+  background-color: #3f3f3f;
+  text-align:left;
+}
+.outer {
+  padding-left: 200px; /*** Same width as margin-left for the float-wrap div ***/
+  text-align: right;
+}
+.inner {
+  width: 100%;
+  padding-bottom: 60px; /*** Padding-bottom value is the same value as the total height of the footer ***/
+}
+
+#main_window {
+  background-image: url(../images/page_content_bg.jpg);
+  background-repeat: repeat-x;
+}
+#page_content {
+  padding: 16px;
+  width: 740px;
+}
+
+.module_pages #page_content {
+  width: 733px;
+}
+
+/*** div.inner is wider than its container, div.outer, and so overlaps to the right, pushing
+div.right into the proper position. IE expands div.outer instead, requiring a Tan hack to avoid
+blowing the layout apart. IE gets the original 100% width as in the Livingstone layout.
+***/
+.float-wrap {
+  float: left;
+  width: 100%;
+  margin-left: -200px; /*** Same length as .outer padding-left but with negative value ***/
+}
+#content {
+  float: right;
+  margin-right: -200px; /*** Same length as .outer padding-left but with negative value ***/
+  width: 100%;
+  position: relative; /*** IE needs this  ***/
+}
+.content_wrap {
+  text-align: left;
+}
+
+/* LEFT COLUMN */
+/*** div.left is in div.float-wrap, and when div.float-wrap is neg margined to the left, div.left is carried over into the proper position. ***/
+#left {
+  float: left;
+  width: 200px;
+  min-height: 250px;
+  background-image: url(../images/left_nav_bg.jpg);
+  background-repeat: repeat-x;
+  position: relative; /*** IE needs this ***/
+  text-align: left;
+}
+
+#left_nav_top {
+  background-color: #272727;
+  width:180px;
+  color: #ffffee;
+  padding-left: 20px;
+  height: 18px;
+}
+
+/* FOOTER */
+#footer {
+  /*** The drawback with this solution is that the height of the footer can't have a flexible height.
+  If you add so much content to the footer that it extends 45px, you will get a vertical scrollbar
+  and the content will overflow the footer if you don't set overflow to hidden ***/
+  height: 20px;
+
+  /*** By using a negative margin-top we now moves the footer up the same amount as the footer height
+  to avoid vertical scrolling. Remember, if you use borders and padding on your footer you will have
+  to calculate this in your negative margin-top value also. ***/
+  margin-top: -20px;
+  background-color: #e9e9e9;
+  vertical-align: bottom;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  position:relative;
+  text-align:center;
+  font-size: 7pt;
+}
+
+td,th,p,li,div,span,ul {
+  font-family: tahoma, verdana, arial;
+  color: black;
+  line-height: 16px;
+  font-size: 8pt;
+}
+input,textarea,select,option,optgroup {
+  font-family: tahoma, verdana, arial;
+  color: black;
+  font-size: 8pt;
+}
+
+a:link, a:visited {
+  color: #008800;
+  text-decoration: none;
+  outline: none;
+}
+a:hover {
+  color: #990000;
+  text-decoration: underline;
+}
+a.no_border:link, a.no_border:visited {
+  border-bottom: none;
+  outline: none;
+}
+
+
+.clear { clear: both; }
+img { border: none; }
+form { margin: 0px; }
+
+.rsvErrorField {
+  background-color: #990000;
+  color: #ffffcc;
+}
+
+input[type=text], input[type=password], textarea {
+  border-top: 1px #acaeb4 solid;
+  border-left: 1px #dde1e7 solid;
+  border-right: 1px #dde1e7 solid;
+  border-bottom: 2px #f1f4f7 solid;
+  padding: 1px;
+  border-radius: 2px;
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+}
+
+.lang_field_full {
+  width: 473px;
+}
+.nav_heading {
+  background-image: url(../images/nav_bg.jpg);
+  padding-left: 20px;
+  color: white;
+  height: 16px;
+}
+table.add_form_nav td {
+  width: 16%;
+  text-align: center;
+}
+table.add_form_nav td.selected {
+  background-color: #1970D7;
+  color: white;
+  border-right: 1px solid #cccccc;
+}
+table.add_form_nav td.selected a:link,table.add_form_nav td.selected a:visited {
+  text-decoration: none;
+  width: 100%;
+  color: white;
+  display: block;
+  padding: 1px;
+}
+table.add_form_nav td.unselected {
+  background-color: #ffffff;
+  color: #999999;
+  border-top: 1px solid #cccccc;
+  border-bottom: 1px solid #cccccc;
+  border-right: 1px solid #cccccc;
+}
+
+.title {
+  font-family: arial;
+  font: 14px/18px Verdana,sans-serif;
+  color: black;
+  padding-bottom: 5px;
+}
+.title a:link, .title a:visited { text-decoration: none; }
+.title a:hover { border-bottom: 1px solid #336699; }
+
+.subtitle {
+  font-family: arial;
+  font-size: 8pt;
+  color: #666666;
+  letter-spacing: 1px;
+}
+
+.underline {
+  border-bottom: 1px solid #cccccc;
+}
+
+.heading {
+  font-size: 10pt;
+  font-weight: bold;
+}
+
+.title span.identifier {
+  font: 14px/18px Verdana,sans-serif;
+  line-height: 11px;
+}
+
+.title a:link, .title a:visited {
+  text-decoration: none;
+}
+.title a:hover {
+  border-bottom: 1px solid #336699;
+}
+.subtitle {
+  font-size: 8pt;
+  color: #4b6c4e;
+  letter-spacing: 1px;
+}
+.underline {
+  border-bottom: 1px solid #cccccc;
+}
+.heading {
+  font-size: 10pt;
+  font-weight: bold;
+}
+.large_text { font-size: 12pt; }
+
+
+.list_table, .submissions_table {
+  border: 1px solid #dddddd;
+  border-spacing: 1px;
+  width: 100%;
+}
+.list_table th, .submissions_table th {
+  background-image: url(../images/list_table_heading.jpg);
+  color: white;
+  height: 18px;
+  text-align: center;
+  font-weight: normal;
+  cursor: auto;
+  white-space: nowrap;
+}
+/* prevents rich-text fields from having their <p> tags */
+.list_table th, .submissions_table p {
+  margin: 0px;
+  padding: 0px;
+}
+.list_table th.over, .submissions_table th.over, th.sortable_col :hover {
+  background-image: url(../images/list_table_heading_over.jpg);
+}
+.list_table th td {
+  vertical-align: middle;
+}
+.list_table td {
+  vertical-align: top;
+}
+.submissions_table td {
+  padding: 0px 2px;
+}
+.submissions_table td .truncate {
+  text-overflow: ellipsis;
+  -o-text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.submissions_table td .truncate_no_fixed_width {
+  overflow: hidden;
+  height: 20px;
+}
+.list_table th a:link, .list_table th a:visited, .submissions_table th a:link, .submissions_table th a:visited {
+  color: white;
+  text-decoration: none;
+  display: block;
+  white-space: nowrap;
+  padding: 2px 3px;
+  height:17px;
+}
+.submissions_table th:hover a {
+  color: #f1fff5;
+}
+.list_table th.del {
+  text-align: center;
+}
+.list_table th.edit, .submissions_table th.edit {
+  text-align: center;
+}
+.list_table tr {
+  background-color: #f2f2f2;
+  height: 20px;
+}
+.list_table tr th table tr td {
+  background-image: url(../images/list_table_heading.jpg);
+}
+.submissions_table tr {
+  height: 20px;
+  cursor: pointer;
+}
+.submissions_table td {
+  vertical-align: top;
+}
+.list_table .del2 {
+  background-image: url(../images/delete_bg.jpg);
+}
+.list_table .del2 a:link, .list_table .del2 a:visited {
+  color: white;
+}
+.list_table .del2 a:hover {
+  color: orange;
+}
+.list_table td.del {
+  background: url("../images/delete.png") no-repeat scroll 2px 3px transparent;
+  text-align: center;
+  width: 18px;
+  height: 20px;
+}
+.list_table td.del a {
+  display: block;
+  height: 18px;
+  display: block;
+}
+.list_table td.del:hover {
+  background: transparent url(../images/delete.png) no-repeat -22px 3px;
+}
+.list_table td.edit, .list_table th.edit {
+  width: 18px;
+  height: 18px;
+}
+.list_table td.edit {
+  text-align: center;
+  background: transparent url(../images/edit.png) no-repeat center 1px;
+  padding: 0px 0px;
+}
+.list_table td.edit a {
+  width: 18px;
+  height: 18px;
+  display: block;
+}
+.list_table td.center, .list_table th.center {
+  text-align: center;
+}
+
+/*----------------- UI messages ------------------*/
+#ft_message { }
+#ft_message_inner { }
+.notify {
+  border: 1px solid #0058db;
+  background-color: #f2f8ff;
+}
+.notify div {
+  color: #0058db;
+}
+.error {
+  border: 1px solid #cc0000;
+  background-color: #ffeded;
+}
+.error div {
+  color: #aa0000;
+}
+.errorField {
+  background-color: #cc0000;
+  color: white;
+}
+.box {
+  border: 1px solid #666666;
+  background-color: #ffffee;
+  color: #333333;
+  padding: 5px;
+}
+.grey_box {
+  background-color: #f9f9f9;
+  padding: 5px;
+  border: 1px solid #cccccc;
+}
+.blue_box {
+  background-color: #CFECFF;
+  padding: 5px;
+  border: 1px solid #336699;
+}
+.light_blue_box {
+  background-color: green;
+  padding: 5px;
+  border: 1px solid #336699;
+}
+
+
+/*----------------- misc -------------------*/
+#search_form {
+  margin-bottom: 8px;
+}
+#search_form_table {
+  border-top: 1px solid #dddddd;
+  border-bottom: 1px solid #dddddd;
+  border-spacing: 1px;
+  background-color: #efefef;
+  padding: 5px;
+}
+.search_keyword {
+  width: 110px;
+}
+#search_field {
+  margin-right: 1px;
+}
+.next_step {
+  color: #336699;
+  font-weight: bold;
+}
+.ul_no_indent {
+  padding-left: 0px;
+  margin-left: 20px;
+}
+.highlighted_text {
+  color: #cc0000;
+}
+.strong_button {
+  font-weight: bold;
+  color: #336699;
+}
+.page_break {
+  page-break-after: always;
+}
+#nav_previous_page {
+  color: #cccccc;
+}
+#nav_next_page {
+  color: #cccccc;
+}
+.previous_page_icon {
+  float:right;
+  margin-top: 5px;
+}
+#account_section a.update_link {
+  color: #ffffcc;
+}
+#account_section a.update_link:hover {
+  color: orange;
+}
+#client_forms_table select {
+  width: 100%;
+}
+.joiner {
+  color: #999999;
+  font-size: 10px;
+  line-height: 11px;
+}
+.check_area:hover {
+  background-color: #dfdfdf !important;
+}
+.italic {
+  font-style: italic;
+}
+.hint {
+  color: #666666;
+  font-style: italic;
+  background-color: #f2f2f2;
+  padding: 3px;
+}
+.module_section {
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  border-radius: 6px;
+  background-color: #e6f5ff;
+  padding: 2px 8px 8px 8px;
+  margin-top: 12px;
+  border: 1px solid #999999;
+  display: inline-block;
+  position: relative;
+}
+.module_section h2 {
+  font: 11px/20px Verdana,sans-serif;
+  color: #777777;
+  margin: 0px;
+  padding: 2px 0px;
+  font-style: italic;
+}
+.module_section .module_link {
+  width: 16px;
+  height: 16px;
+  background-image: url(../images/utilities_small.png);
+  position: absolute;
+  right: 3px;
+  top: 3px;
+}
+.module_section .module_link a {
+  display: block;
+  width: 16px;
+  height: 16px;
+}
+.export_manager_module table tr {
+  height: 23px;
+}
+.export_manager_module .icon {
+  padding-right: 6px;
+}
+.export_manager_module .export_group_name {
+  padding-right: 10px;
+}
+.export_manager_module .target_content {
+  padding-right: 10px;
+}
+
+
+/* ...??? */
+.add_group_popup input {
+  width: 100%;
+}
+.selected_row {
+  background-color: #e6f6e7;
+}
+
+/* this should be used for all dialog windows */
+.ft_dialog td {
+  padding: 1px;
+}
+.edit_submission {
+  width: 100%;
+}
+.edit_submission h3 {
+  border-bottom: 1px solid #cccccc;
+  margin: 0px 0px 8px 0px;
+  color: #4B6C4E;
+  font-size: 8pt;
+  letter-spacing: 1px;
+}
+.edit_submission .list_table {
+  margin-bottom: 14px;
+}
+.num_submissions_box {
+  background-color: #ffffdd;
+  font-size: 6pt;
+  color: black;
+  font-family: arial;
+  width: 26px;
+  height: 10px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  line-height: 12px;
+  padding-bottom: 1px;
+  position: absolute;
+  top: 4px;
+  right: 12px;
+  text-align: center;
+}
+.form_info_link {
+  position: relative;
+}
+.form_info_link a {
+  display: block;
+  padding: 0px 44px 0px 14px;
+}
+.loading_small {
+  background-image: url(../../../global/images/loading_small.gif);
+  margin: 3px 0px;
+  height: 16px;
+  width: 16px;
+}
+a.show_form {
+  width: 13px;
+  height: 13px;
+  background-image: url(../../../global/images/open_new_window.png);
+  float: right;
+  margin: 2px 4px;
+}
+.views_dropdown {
+  background-color: #e8e8e8;
+  display: inline-block;
+  height: 23px;
+  border-radius: 4px;
+  -moz-border-radius: 4px;
+}
+.views_dropdown select {
+  margin: 2px;
+}
+.button_separator {
+  color: #dddddd;
+  margin-left: 16px;
+  margin-right: 16px;
+}
+
+#premium_module_dialog input {
+  width: 50px;
+  font-size: 11pt;
+}
+.license_key_panel {
+  padding: 5px;
+  background-color: #f2f2f2;
+  border: 1px solid #dddddd;
+   border-radius: 3px;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  text-align: center;
+}
+.desc {
+  font-style: italic;
+  color: #999999;
+  margin-bottom: 6px;
+}

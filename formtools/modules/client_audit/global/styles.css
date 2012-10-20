@@ -1,0 +1,59 @@
+#search_table {
+	background-color: #efefef;
+	padding: 6px;
+	border-top: 1px solid #bbbbbb;
+	border-bottom: 1px solid #bbbbbb;
+}
+#search_table ul {
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+}
+#search_table th {
+  background-color: #999999;
+}
+.ct_login {
+  color: green;
+}
+.ct_logout {
+  color: #336699;
+}
+.ct_account_created {
+  color: #330099;
+}
+.ct_account_deleted {
+  color: red;
+}
+.ct_admin_update {
+  color: purple;
+}
+.ct_client_update {
+  color: brown;
+}
+.ct_permissions {
+  color: #4ba2dd;
+}
+
+.list_table tr.added {
+  background-color: green;
+}
+.list_table tr.changed {
+  background-color: #C6F1C9;
+}
+.list_table tr.added td a {
+	color: white;
+}
+.list_table div.removed, .list_table tr.deleted {
+  background-color: #aa0000;
+  padding-left: 3px;
+}
+.list_table tr.deleted td, .list_table tr.deleted td a:link, .list_table tr.deleted td a:visited {
+  color: white;
+}
+.list_table div.added {
+  background-color: green;
+  padding-left: 3px;
+}
+.list_table div.removed a:link, .list_table div.removed a:visited, .list_table div.added a:link, .list_table div.added a:visited {
+  color: white;
+}

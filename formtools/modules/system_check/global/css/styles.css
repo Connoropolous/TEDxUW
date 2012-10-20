@@ -1,0 +1,43 @@
+.untested {
+	color: #cccccc;
+}
+.passed {
+	color: green;
+}
+.failed {
+	color: red;
+}
+
+table.log_table .full_log_heading {
+	background-color: green;
+	color: white;
+	font-weight: bold;
+	font-size: 8pt;
+	padding-left: 3px;
+}
+table.log_table .error_log_heading {
+	background-color: #990000;
+	color: white;
+	font-weight: bold;
+	font-size: 8pt;
+	padding-left: 3px;
+}
+table.log_table td {
+	background-color: #efefef;
+}
+table.log_table textarea {
+  width: 340px;
+  height: 400px;
+  font-size: 10px;
+  line-height: 10pt;
+  padding: 10px;
+}
+.list_table td img {
+  margin-top: 4px;
+}
+
+.index_link_table td {
+  padding-bottom: 5px;
+}
+
+tr.no_test td { color: #aaaaaa; }

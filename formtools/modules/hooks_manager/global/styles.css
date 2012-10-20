@@ -1,0 +1,17 @@
+table.hook_param_table th {
+  background-color: #dddddd;
+	padding-left: 2px;
+}
+table.hook_param_table td {
+  background-color: #efefef;
+	padding-left: 2px;
+}
+table.hook_param_table {
+  border-left: 1px solid #666666;
+  border-bottom: 1px solid #666666;
+  border-right: 1px solid #666666;		
+}
+#custom_hook_smarty_code {
+  color: #336699;
+  font-style: italic;
+}

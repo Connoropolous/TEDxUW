@@ -1,0 +1,134 @@
+.export_group_list .header_row .col2 {
+  width: 212px;
+}
+.export_group_list .col2 {
+  width: 212px;
+  padding-left: 2px;
+}
+.export_group_list .col3 {
+  width: 69px;
+  text-align: center;
+}
+.export_group_list .col4 {
+  width: 80px;
+  text-align: center;
+}
+.export_group_list .col5 {
+  width: 130px;
+  text-align: center;
+}
+.export_group_list .col6 {
+  width: 140px;
+  text-align: center;
+}
+.export_group_list .col6 a {
+  display: block;
+}
+.export_group_list .col6 a:hover {
+  color: orange;
+  text-decoration: none;
+}
+
+.export_type_list .col2 {
+  width: 40px;
+  text-align: center;
+}
+.export_type_list .header_row .col3 {
+  width: 350px;
+  padding-left: 0px;
+}
+.export_type_list .col3 {
+  width: 348px;
+  padding-left: 2px;
+}
+.export_type_list .col4 {
+  width: 207px;
+  text-align: center;
+}
+.export_type_list .col5 {
+  width: 200px;
+  text-align: center;
+}
+
+.inner_nav {
+  background-color: #f9f9f9;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+}
+.inner_nav ul {
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+}
+.inner_nav ul li {
+  float: left;
+  margin: 33px;
+}
+
+ul.icon_list {
+  list-style: none;
+  margin: 0px;
+  padding: 0px;
+}
+ul.icon_list li {
+  padding: 2px 4px;
+  height: 23px;
+  margin-right: 2px;
+  background-color: #efefef;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  float: left;
+}
+ul.icon_list li:hover, ul.icon_list li.selected {
+  background-color: #bad7eb;
+}
+ul.icon_list li.no_icon {
+  width: 25px;
+}
+.add_export_group_table tr, .edit_export_group_table tr {
+  height: 26px;
+}
+.subpanel {
+  width: 560px;
+}
+
+.overflow_panel {
+  background-color: white;
+  border: 1px solid #999999;
+  border-bottom: 0px;
+  width: 95%;
+  height: 100%;
+  overflow-y: scroll;
+}
+.overflow_panel ul {
+  list-style: none;
+  margin: 0px;
+  padding: 0px;
+}
+.overflow_panel ul li {
+  padding: 2px 0px 2px 2px;
+}
+.overflow_panel ul li:hover {
+  background-color: #efefef;
+}
+.overflow_panel ul li input {
+  margin-right: 8px;
+  float: left;
+}
+.overflow_panel ul li label {
+  display: block;
+}
+.overflow_panel h2  {
+  padding: 0px 0px 0px 5px;
+  margin: 0px;
+  color: #336699;
+}
+.overflow_panel .view_group {
+  border-bottom: 1px dotted #cccccc;
+}
+.all_views_label {
+  color: #666666;
+  font-style: italic;
+}

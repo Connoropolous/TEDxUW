@@ -1,0 +1,331 @@
+@charset "utf-8";
+/* CSS Document */
+
+@font-face {
+    font-family: 'HelveticaLTStdBold';
+    src: url('fonts/helveticaltstd-bold-webfont.eot');
+    src: url('fonts/helveticaltstd-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/helveticaltstd-bold-webfont.woff') format('woff'),
+         url('fonts/helveticaltstd-bold-webfont.ttf') format('truetype'),
+         url('fonts/helveticaltstd-bold-webfont.svg#HelveticaLTStdBold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'HelveticaLTStdRoman';
+    src: url('fonts/helveticaltstd-roman-webfont.eot');
+    src: url('fonts/helveticaltstd-roman-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/helveticaltstd-roman-webfont.woff') format('woff'),
+         url('fonts/helveticaltstd-roman-webfont.ttf') format('truetype'),
+         url('fonts/helveticaltstd-roman-webfont.svg#HelveticaLTStdRoman') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {background:#000; color: #FFF; font-family:'HelveticaLTStdRoman', Helvetica, sans-serif;}
+
+a, a:hover, a.active {color: #FFF; text-decoration:none; }
+img {border:none;}
+
+.clearfloat {clear:both; }
+
+#welcomeScreenWrapper {display:block; width:1024px; margin:0 auto 0 auto; }
+#welcomeScreen {display:block; width:924px; height:535px; position:absolute; background: #005490; z-index:22; top:-625px; padding:50px; }
+#welcomeScreen a { display:block; width:60px; height:17px; position:absolute; left:482px; top:618px; background:#70c3e3; text-align:center; }
+
+#timelineWrapper {display:block; width:1024px; height:57px; margin: 10px auto 0 auto; color:#FFF; background: url(images/full-timeline-bg.png) no-repeat top left;}
+#timeline {display:block; width:1024px; height:57px; margin: 0 auto; font-family:  'HelveticaLTStdBold'; position: absolute;  background: url(images/timelineMarker2.png) no-repeat 0px 0px; }
+#timeline2 p, #timeline3 p, #timeline4 p { display:block; width:140px; margin: 0 auto; }
+#timeline a, #timeline a:hover, #timeline a.active {color: #FFF; text-decoration:none; }
+.timelineSection {display:block; width:204px; height:47px; float:left; text-align:center; padding-top: 10px; color: #FFF; }
+#timeline1{ width:235px; }
+#timeline1 p {display:block; width:140px; margin:8px 0 0 30px; font-size:20px; } 
+#timeline2{ width:235px; margin-left:-38px;} 
+#timeline3{ width:235px; margin-left:-38px;} 
+#timeline4{ width:235px; margin-left:-38px;} 
+#timeline5{ width:235px; margin-left:-39px;} 
+#timeline5 p {display:block; width:140px; margin:0 0 0 60px;} 
+
+#WelcomeAndPlay {display:block; width:1024px; height:568px; position:relative; margin:0 auto;}
+
+#introVideo {display: block; position: absolute; overflow: hidden; margin: 0 auto; width:1024px; height: 568px; z-index: 10;}
+#skipIntro { position:absolute; top: 5px; left: 0px; }
+
+#game {display:none; position: absolute; width:1024px; height: 568px; margin: 0 auto; background:#000; z-index:0; }
+
+#Surface{
+	position:absolute;
+	top: 0px; 
+	left: 0px;
+	z-index:-1;
+}
+
+.helpBox {
+	position:absolute;
+	z-index:2;
+	display:none;
+	width: 194px;
+	height:90px;
+	background: url(images/helpBoxBG.png) no-repeat top left;
+	padding: 25px 5px 5px 5px;
+	color:#408bd0; 
+	text-align:center;
+	font-size:15px;
+}
+#helpBox1 {}
+#helpBox2 {left:204px;}
+#helpBox3 {left:408px;}
+#helpBox4 {left:612px;}
+#helpBox5 {left:816px;}
+
+#inspirations {
+	display:none;
+	position:absolute;
+	width:260px;
+	height:72px;
+	left:624px;	
+	background:url(images/bubbles.png) no-repeat top left;
+	z-index:5;
+	padding: 70px 60px 80px 80px;
+}
+
+#gameTitleDiv {
+	position:absolute;
+	display:block;
+	width:900px;
+	top:40px;
+	left:30px;
+	font-size:36px;
+	text-align:center;
+	z-index:1;
+}
+
+#gameTitleDiv #explainDonate { 
+	position:absolute;
+	display:none;
+	width:384px;
+	font-size:14px;
+	text-align:left;
+	z-index:1;
+	background: url(images/explainDonateBG.png) no-repeat top left;
+	border-radius:10px; 
+	-moz-border-radius:10px;
+	padding:8px;
+	}
+
+#gameTitleDiv #donateForm {
+	position:absolute;
+	top:100px;
+	display:block;
+	width:422px;
+	left:525px;
+	font-size:22px;
+	text-align:left;
+	z-index:1;
+	}
+
+#gameTitleDiv label {font-size:20px;}
+
+#gameTitleDiv #bigLogo {float:right; display:block; width:422px; height:195px; background: url(images/StremeLogo.png) no-repeat top left; }
+
+#formDiv {
+	position:absolute;
+    top:240px;
+	left:50px;
+	width:924px;
+	height:250px;
+	z-index:1;
+	padding: 10px;
+ }
+ 	   
+	  #myform {
+		  text-align:left;
+		  margin-top: 0px;
+	   }
+	   
+	   #formDiv p, #formDiv label {
+		   font-size:20px;
+		   -webkit-margin-before: 0em;
+			-webkit-margin-after: 0em;
+			-webkit-margin-start: 0px;
+			-webkit-margin-end: 0px;
+			margin:0;
+		   }
+	   	   
+	  .input {
+		  width:924px;
+		  height:38px;
+		  background:#FFF;
+		  color:#000; 
+		  font-size: 24px;
+		  font-family:'HelveticaLTStdRoman', Helvetica, sans-serif;
+		  outline:none;
+		  opacity:0.4;
+	   }
+	   
+	   #formDiv .input {
+			margin-top:0px;   
+	   }
+	   
+	  .submit {
+		  position:absolute;
+		  top:110px;
+		  width:422px;
+		  height: 145px;
+		  background:none;
+		  color:#FFF;
+		  font-size: 30px;
+		  cursor:pointer;
+	  }
+	  
+	  #think {text-indent:-9999px; background:url(images/think.png) no-repeat top left; border:none; left:250px;}
+  	  #aha {text-indent:-9999px; background:url(images/aha!.png) no-repeat top left; border:none; left:250px;}
+
+#bottomThings {
+	display:block;
+	position:relative;
+	width:1024px;
+	height: 26px;
+	margin: 0 auto 0 auto;	
+	z-index:23;
+}
+	#imaginedBy {
+		position:relative;
+		top:-60px;
+		left:-40px;
+		float:left;
+		display:block; 
+		width:160px;
+		height:90px; 
+		background: url(images/bubbles3.png) no-repeat top left;
+		text-align:center;
+		padding-top:30px;
+	}
+	
+	#imagined {
+		font-style:italic;	
+		font-size: 13px;
+		margin-bottom:3px;
+	}
+
+	#museumLink {
+	}
+
+	#likeButton { 
+		float:left;
+		margin-left: 250px;
+	}
+		
+	#tweet {
+		float:left;
+		margin: 2px 10px 0 10px;	
+	}	
+		
+	#___plusone_0 {
+		float:left;
+	}
+	
+	#extraButtons {
+		position:relative;
+		display:block;
+		width: 200px;
+		height: 112px;
+		top:-177px;
+		left:40px;
+		float:right;
+		color: #04afc0;
+		background:url(images/bubbles4.png) no-repeat top left;
+	}
+	
+	#extraButtons button{
+		background:transparent;
+		color: #FFF;
+		font-family:'HelveticaLTStdRoman', Helvetica, sans-serif;
+		font-size:16px;
+		width:80px;
+		height:80px; 
+		float:left;
+		background:transparent;
+		border: none;
+		font-size:16px;
+		cursor:pointer;
+	}
+	
+		  #concept {
+			  margin-left:20px; 
+			  margin-top:15px;
+		  }
+		  
+		  #credits {
+			  margin-left:10px; 
+			  margin-top:10px;
+		  }
+
+.modal {
+	position:relative;
+	display:block;
+	height: 528px; 
+	background: #408BD0;
+	display:none;
+	width:600px;
+	top:57px;
+	text-align:left;
+	color: #FFF;
+	z-index: 15;
+	padding:20px 212px;
+}
+
+.modalContent {
+	display:block;
+	width:600px;
+	height:568px;
+	z-index: 15; 	
+}
+	
+.modal h2 {
+	float:left;
+	margin:0px;
+	padding:2px 0 2px 10px;
+	font-size:20px;
+}
+.modal .close {float:right; }
+
+.myform label {margin:none;}
+
+#formQueryNotHidden {display:none; }
+#formconcept1Hidden {display: none;}
+#formconcept2Hidden {display: none;}
+#formconcept3Hidden {display: none;}
+#formconcept4Hidden {display: none;}
+#formconcept5Hidden {display: none;}
+#formconcept6Hidden {display: none;}
+#formconcept7Hidden {display: none;}
+#formconcept8Hidden {display: none;}
+#formIdeaNotHidden {display: block; width: 422px; margin-top:15px; height:24px; font-size:18px;}
+#formUsernameNotHidden {display: block; width: 422px; margin-top:15px; height:24px; font-size:18px;}
+#formUseremailNotHidden {display: block; width: 422px; margin-top:15px; height:24px; font-size:18px;}
+#formSubmitNotHidden {
+	margin-top:15px;
+	display:block;
+	border:none;
+	height: 81px;
+	width:422px;
+	background: url(images/Picture1.png) no-repeat top left;
+	color:#FFF;
+	text-indent:-9999px;
+	font-size: 30px;
+	font-family:'HelveticaLTStdRoman', Helvetica, sans-serif;
+	cursor:pointer;
+	}
+
+.logos {
+	margin: 30px auto 0 auto;
+	display:block;
+	width:278px;
+}
+
+.sublogos {
+	float:left;
+	margin-left:15px;	
+}
