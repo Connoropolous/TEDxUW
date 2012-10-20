@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.18, created on 2012-10-14 20:14:35
+<?php /* Smarty version 2.6.18, created on 2012-10-20 16:57:39
          compiled from ../../install/templates/install_header.tpl */ ?>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html dir="<?php echo $this->_tpl_vars['LANG']['special_text_direction']; ?>
