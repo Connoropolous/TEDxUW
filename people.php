@@ -104,8 +104,8 @@ function dropIdea(ideaID, e) {
                     <h2><?php echo $idea["username"]; ?>'s Idea</h2>
                 </div>
                 <div class="ideaContent">
-                    <div class="ideaIdea"><h2><?php echo $idea["idea"]; ?></h2></div>
-                    <div class="ideaQueries"><h3>Queries: <?php echo $idea["query"]; ?></h3></div>
+                    <div class="ideaIdea"><h2><?php echo $idea["useredge"]; ?></h2></div>
+                    <div class="ideaQueries"><h3>Queries: <?php echo $idea["usercloud"]; ?></h3></div>
                 </div>
                 <div class="ideaConcepts1">
                     <div class="concept1">

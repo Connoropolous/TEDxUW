@@ -10,7 +10,7 @@ ASSET_MANAGER.downloadAll(function() {
 		});
 
 var frm,inp1Label,inp,sbmt;
-var frm2,inp2Label,inp2,sbmt2;
+var createCloud;
 
 // variables for the form which will submit to the database if they click donate
 var formId, UserSubmitForm, usercloud, useredge, username, useremail, photoPermission, photoPermissionLabel, userSubmit;
@@ -19,9 +19,6 @@ var addTheConcepts = new Array(8);
 for (var i = 1; i < 9; i++) {
 	addTheConcepts[i - 1] = eval("var concept"+(i));
 }
-
-// the Google Plusone 
-var po;
 
 //
 // Section for defining the hidden User Submit form
@@ -87,8 +84,8 @@ var po;
 	userSubmit=document.createElement('input');
 	userSubmit.setAttribute('name','finalSubmit');
 	userSubmit.setAttribute('type','submit');
-	userSubmit.setAttribute('class', 'donate');
-	userSubmit.setAttribute('value','Donate');
+	//userSubmit.setAttribute('class', 'donate');
+	userSubmit.setAttribute('value','Submit!');
 	userSubmit.setAttribute('id','formSubmitNotHidden');
 
 	UserSubmitForm.appendChild(formId);
@@ -114,23 +111,10 @@ var po;
 
 function WelcomeScreen() {
 	
-		//ctx.drawImage(ASSET_MANAGER.getAsset('images/LoopStream_peters2.png'), 0, 0, 1024, 568);
+	    // draw the background image
+		ctx.drawImage(ASSET_MANAGER.getAsset('images/LoopStream_peters2.png'), 0, 0, 1024, 568);	
 		
-		$('[placeholder]').focus(function() {
-				var input = $(this);
-				if (input.val() == input.attr('placeholder')) {
-				  input.val('');
-				  input.removeClass('placeholder');
-				}
-			  }).blur(function() {
-				var input = $(this);
-				if (input.val() == '' || input.val() == input.attr('placeholder')) {
-				  input.addClass('placeholder');
-				  input.val(input.attr('placeholder'));
-				}
-			  }).blur();
-				
-		
+		// don't let them proceed unless they enter a valid email.
 		$("#myform").validate({
 			debug: false,
 			rules: {
@@ -140,7 +124,17 @@ function WelcomeScreen() {
 				email: "Enter a valid email.",
 			},
 			submitHandler: function(form) {
-				 runQuery();
+				game.start();
+				mouseCanMove = true;
+				
+				var i = 0;
+				var tempquery = $('#form1input').attr('value');
+				useremail.setAttribute('value',tempquery);
+				
+				document.getElementById('formDiv').innerHTML = '';
+				$('#formDiv').css('display','none');
+				
+				//don't reload the page. stop that default event
 				return false;
 					
 			}
@@ -148,19 +142,6 @@ function WelcomeScreen() {
 	
 }
 
-function runQuery() {
-	
-	game.start();
-    mouseCanMove = true;
-	
-	var i = 0;
-	var tempquery = document.forms["emailForm"]["email"].value;
-	useremail.setAttribute('value',tempquery);
-	
-	document.getElementById('formDiv').innerHTML = '';
-	$('#formDiv').css('display','none');
-						
-}
 
 function f() {
      return false;

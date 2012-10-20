@@ -40,8 +40,6 @@
                 <script type="text/javascript" src="scripts/wordlist.js"></script>
 				<script type="text/javascript" src="scripts/getstarted.js"></script>
      			<script type="text/javascript" src="scripts/realizeyouridea.js"></script>         
-     			<script type="text/javascript" src="scripts/supportthemuseum.js"></script>
-                <script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>
                 
              <div id="gameTitleDiv">
              		<div id="explainDonate"></div>
@@ -57,15 +55,6 @@
              </div>           
         </div>
     </div>
-    
-     <div id="bottomThings">
-             <iframe id="likeButton" src="https://www.facebook.com/plugins/like.php?href=http://streme.ca" scrolling="no" frameborder="0" style="border:none; width:50px; height:24px"></iframe>
-             <div id="tweet">
-                    <a href="http://twitter.com/share" class="twitter-share-button" data-text="Check out this interesting game about ideas from THEMUSEUM!" data-count="none" data-via="THEMUSEUM">Tweet</a><script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
-             </div>
-             <div class="g-plusone" data-annotation="none" data-href="http://streme.ca"></div> 
-             <div class="clearfloat"></div>
-         </div>  
       
 </body>
 
