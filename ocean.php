@@ -78,28 +78,6 @@ function dropIdea(ideaID, e) {
 
 </script>
 
-<div id="timelineWrapper">
-	<div id="timeline">
-    	<a href="/" class="timelineSection" id="timeline1">
-     		<p>Start Thinking</p>
-        </a>
-        <div class="timelineSection" id="timeline2">
-     		<p>Experience the Thought Streme</p>
-        </div>
-        <div class="timelineSection" id="timeline3">
-     		<p>Realize <br>Your Idea</p>
-        </div>
-        <a href="/donate.htm" width="500" height="500" target="_new" class="timelineSection" id="timeline4">
-     		<p>Support THEMUSEUM</p>
-        </a>
-        <a href="/ocean.php" class="timelineSection" id="timeline5">
-     		<p>Explore the <br> Ocean of Ideas</p>
-        </a>
-    </div> 
-</div>
-
-<div class="clear"></div>
-
 <?php	
 	$ideas = array();
 	

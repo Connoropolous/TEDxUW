@@ -34,15 +34,6 @@
 		$('#timeline').animate({backgroundPosition: '395px 0px'});
 		document.getElementById('formDiv').appendChild(frm2);
 		
-		$('#helpBox3').fadeOut('fast',
-			function () {
-				$('#helpBox3').html("Use your creativity to develop an idea! Try using those words you picked up listed below to help you.");
-			});
-		$('#helpBox3').delay(1000).fadeIn('slow',
-			function () {
-				$('#helpBox3').delay(4000).fadeOut('slow');
-			});
-		
 		$("#ahaForm").validate({
 			debug: false,
 			rules: {

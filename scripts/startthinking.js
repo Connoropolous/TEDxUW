@@ -220,53 +220,7 @@ var po;
 	IdeaSubmitForm.appendChild(useremailPermissionLabel);
 	IdeaSubmitForm.appendChild(ideaSubmit);
      
-    
-
-//
-//
-//
-// VIDEO SECTION
-
-/*function loadGameBehind(e) {
-	if (e) {
-		ASSET_MANAGER.downloadAll(function() {
-	  		$('#game').css('display','block');
-	  		$('#game').css('background', 'url(images/LoopStream_peters.png) no-repeat top left');
-	  		game.init(ctx);
-	  		WelcomeScreen();
-		});
-	}
-}*/
-
-/*function videoEnded(e) {
-	if (e) {
-			$('#introVideo').fadeOut('slow');
-	}
-}
-
-function failed(e) {
-   // video playback failed - show a message saying why
-   switch (e.target.error.code) {
-     case e.target.error.MEDIA_ERR_ABORTED:
-       alert('You aborted the video playback.');
-       break;
-     case e.target.error.MEDIA_ERR_NETWORK:
-       alert('A network error caused the video download to fail part-way.');
-       break;
-     case e.target.error.MEDIA_ERR_DECODE:
-       alert('The video playback was aborted due to a corruption problem or because the video used features your browser did not support.');
-       break;
-     case e.target.error.MEDIA_ERR_SRC_NOT_SUPPORTED:
-       alert('The video could not be loaded, either because the server or network failed or because the format is not supported.');
-       break;
-     default:
-       alert('An unknown error occurred.');
-       break;
-   }
- }*/
  
- //
- //
  //
  //  WELCOME SCREEN SECTION
 
@@ -326,70 +280,11 @@ function WelcomeScreen() {
 	
 }
 
-function runTutorial() {
-	$('#helpBox1').html("Start by typing a few keywords (try anything!) in the blank field, separated by commas, and click 'Think'.");
-	var s=setTimeout("$('#helpBox1').html('These keywords will spark a search that could inspire an idea.');",5000);		
-		$('#helpBox1').delay(10000).fadeOut('slow',
-			function () { 
-				$('#helpBox2').fadeIn('slow',
-					function () {
-						$('#helpBox2').delay(4000).fadeOut('slow',
-							function () {
-								$('#helpBox3').fadeIn('slow',
-									function () {
-										$('#helpBox3').delay(4000).fadeOut('slow',
-											function () {
-												$('#helpBox4').fadeIn('slow',
-													function () {
-														$('#helpBox4').delay(4000).fadeOut('slow',
-															function () {
-																$('#helpBox5').fadeIn('slow',
-																	function () {
-																		$('#helpBox5').delay(4000).fadeOut('slow',
-																			function () {
-																				$('#helpBox1').html('Hover over any section above any time to get reminded what that stage is about. The cloud will mark what stage youre in.');
-																				$('#helpBox1').fadeIn('slow',
-																					function () {
-																						$('#helpBox1').delay(4000).fadeOut('slow', 
-																							function () { 
-																								$('#helpBox1').html('Click above any time to restart your thinking process! or <a href="#" onclick="runTutorial(); return false;" style="color:#06F;">click here</a> to get the tutorial again.<br> <a href="#" onclick="document.getElementById(&#39;helpBox1&#39;).style.display = &#39;none&#39;; return false;" style="color:#06F;">-close this box-</a>');
-																							});
-																						
-																					});
-																			});
-																	});	
-															});	
-													});	
-											});
-									});
-							});
-					});
-			});
-}
 
 function runQuery() {
 	
 	game.start();
-    $('#timeline').animate({backgroundPosition: '210px 0px'});
-	$('#helpBox1').fadeOut('fast');
-	$('#helpBox2').fadeOut('fast');
-	$('#helpBox3').fadeOut('fast');
-	$('#helpBox4').fadeOut('fast');
-	$('#helpBox5').fadeOut('fast');
-	
-	$('#helpBox2').html('Pick up words that feel meaningful to your thinking by hovering over their blue dot... avoid concepts you don&#39;t want!');
-	$('#helpBox2').fadeIn('fast',
-		function () { 
-			$('#helpBox3').html('You can grab up to 8 words before you realize your idea, or you can click here at any time to stop and articulate it!');
-			$('#helpBox2').delay(6000).fadeOut('fast');
-			$('#helpBox3').delay(6000).fadeIn('fast',
-				function () { 
-					$('#helpBox3').delay(6000).fadeOut('fast', 
-					function () {
-						mouseCanMove = true;
-					});
-				});
-		});
+	mouseCanMove = true;
 	
 	var logo = document.getElementById('bigLogo');
 	document.getElementById('gameTitleDiv').removeChild(logo);
@@ -428,7 +323,3 @@ function runQuery() {
 function f() {
      return false;
 }   
-
-//
-//
-//
