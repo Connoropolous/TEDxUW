@@ -31,7 +31,6 @@
 	function realizeIt() {	
 		gameFinished = true;
         mouseCanMove = false;
-		$('#timeline').animate({backgroundPosition: '395px 0px'});
 		document.getElementById('formDiv').appendChild(frm2);
 		
 		$("#ahaForm").validate({
@@ -49,12 +48,5 @@
 		});
 		
 		$('#formDiv').fadeIn('slow', function(){});
-		
-		$('#aha').mousedown(function() {
-  			$('#aha').css('margin-top','3px');
-		});
-		$('#game').mouseup(function() {
-  			$('#aha').css('margin-top','0px');
-		});
 		
 	}

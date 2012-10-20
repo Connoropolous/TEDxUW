@@ -37,7 +37,8 @@
              <canvas id="Surface" width="1024" height="568"></canvas>
              	
                 <script type="text/javascript" src="gameplay.js"></script>
-				<script type="text/javascript" src="scripts/startthinking.js"></script>
+                <script type="text/javascript" src="scripts/wordlist.js"></script>
+				<script type="text/javascript" src="scripts/getstarted.js"></script>
      			<script type="text/javascript" src="scripts/realizeyouridea.js"></script>         
      			<script type="text/javascript" src="scripts/supportthemuseum.js"></script>
                 <script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>
@@ -45,17 +46,18 @@
              <div id="gameTitleDiv">
              		<div id="explainDonate"></div>
              		<div id="donateForm"></div>
-             		<div id="bigLogo"></div><div class="clearfloat"></div>
+             		<div class="clearfloat"></div>
              </div>
              <div id="formDiv">
-             	<form name="questionForm" method="GET" action="/" id="myform" autocomplete="off">
-                	<p>I want to think about...</p>
-                	<input id="form1input" class="input" type="text" name="question" ></input>
-                	<input type="submit" class="submit" name="ideaSubmit" id="think" value="Think!" ></input>
+             	<form name="emailForm" method="GET" action="/" id="myform" autocomplete="off">
+                	<p>Enter your email...</p>
+                	<input id="form1input" class="input" type="text" name="email" ></input>
+                	<input type="submit" class="submit" name="emailSubmit" id="email" value="Get Started" ></input>
              	</form>
              </div>           
         </div>
     </div>
+    
      <div id="bottomThings">
              <iframe id="likeButton" src="https://www.facebook.com/plugins/like.php?href=http://streme.ca" scrolling="no" frameborder="0" style="border:none; width:50px; height:24px"></iframe>
              <div id="tweet">

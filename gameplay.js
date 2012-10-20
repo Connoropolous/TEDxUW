@@ -422,7 +422,7 @@ Concepts.prototype.constructor = Concepts;
 			ctx.beginPath();
 	    	ctx.arc(x, y, this.radius, 0, 2 * Math.PI, false);
  
-    		ctx.fillStyle = "#8ED6FF";
+    		ctx.fillStyle = "#FF3333";
     		ctx.fill();
 		}
 		
