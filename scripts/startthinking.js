@@ -108,13 +108,9 @@ starters.push("Star Trek");
 starters.push("faith");
 starters.push("futurism");
 
-$(document).ready(function(){
-	
-});
-
 ASSET_MANAGER.downloadAll(function() {
 	  		$('#game').css('display','block');
-	  		$('#game').css('background', 'url(images/LoopStream_peters.png) no-repeat top left');
+	  		$('#game').css('background', 'url(images/LoopStream_peters2.png) no-repeat top left');
 	  		game.init(ctx);
 	  		WelcomeScreen();
 		});
@@ -226,7 +222,9 @@ var po;
 
 function WelcomeScreen() {
 
-		ctx.drawImage(ASSET_MANAGER.getAsset('images/LoopStream_peters.png'), 0, 0, 1024, 568);
+		
+		
+		ctx.drawImage(ASSET_MANAGER.getAsset('images/LoopStream_peters2.png'), 0, 0, 1024, 568);
 			
 		var word1FromArray = Math.floor(Math.random()*starters.length);
 		var tempVal1 = starters[word1FromArray];
@@ -261,22 +259,19 @@ function WelcomeScreen() {
 				question: "Enter at least two keywords to think about.",
 			},
 			submitHandler: function(form) {
-				runQuery(); 
-				return f();	
+				console.log('got this far');
+				 runQuery();
+				return false;
+					
 			}
 		});
-								
-		$(".modalInput").overlay();
-		
+										
 		$('#think').mousedown(function() {
   			$('#think').css('margin-top','3px');
 		});
 		$('#game').mouseup(function() {
   			$('#think').css('margin-top','0px');
 		});
-		
-		$('#helpBox1').delay(1000).fadeIn('slow', 
-			function(){});
 	
 }
 
@@ -284,7 +279,8 @@ function WelcomeScreen() {
 function runQuery() {
 	
 	game.start();
-	mouseCanMove = true;
+    mouseCanMove = true;
+
 	
 	var logo = document.getElementById('bigLogo');
 	document.getElementById('gameTitleDiv').removeChild(logo);
@@ -301,9 +297,7 @@ function runQuery() {
 	var tempVal4 = starters[word4FromArray];
 	
 	tempquery = tempquery.split(", ");
-			
-	console.log(tempquery.length);		
-			
+						
 	function myLoop () {           //  create a loop function
   		 setTimeout(function () {   
   		    if (i < tempquery.length) {           
@@ -317,9 +311,13 @@ function runQuery() {
   		 }, 600)
 	}
 	
-	myLoop();
+	//myLoop();
 }
 
 function f() {
      return false;
 }   
+
+//
+//
+//

@@ -64,39 +64,6 @@ AssetManager.prototype.downloadAll = function(callback) {
     }
 }
 
-//AssetManager.prototype.downloadSounds = function(callback) {
-//    var that = this;
-//    soundManager.onready(function() {
-//       console.log('soundManager ready');
-//        for (var i = 0; i < that.soundsQueue.length; i++) {
-//            that.downloadSound(that.soundsQueue[i].id, that.soundsQueue[i].path, callback);
-//        }
-//    });
-//    soundManager.ontimeout(function() {
-//        console.log('SM2 did not start');
-//   });
-//}
-
-//AssetManager.prototype.downloadSound = function(id, path, callback) {
-//    var that = this;
-//    this.cache[path] = soundManager.createSound({
-//        id: id,
-//        autoLoad: true,
-//        url: path,
-//        onload: function() {
-//            console.log(this.url + ' is loaded');
-//            that.successCount += 1;
-//            if (that.isDone()) {
-//                callback();
-//            }
-//        }
-//    });
-//}
-
-//AssetManager.prototype.getSound = function(path) {
-//    return this.cache[path];
-//}
-
 AssetManager.prototype.getAsset = function(path) {
     return this.cache[path];
 }
@@ -589,8 +556,6 @@ ASSET_MANAGER.queueDownload('images/LoopStream.png');
 ASSET_MANAGER.queueDownload('images/LoopStream_peters2.png');
 ASSET_MANAGER.queueDownload('images/glimmer.png');
 ASSET_MANAGER.queueDownload('images/Picture1.png');
-ASSET_MANAGER.queueDownload('images/Title1.png');
-// ASSET_MANAGER.queueSound('alien-boom', 'audio/alien_boom.mp3');
  
 // initialize inspirations
 inspirations.push("Gravitate towards words that inspire your idea, leave the rest behind.");

@@ -20,9 +20,20 @@
 </head>
 
 <body>
+	<script type="text/javascript">
+              var gameBegun = false;
+              var gameFinished = false;
+              
+              function endGame() {	
+                  if (gameBegun) {
+                      gameFinished = true;
+                  }
+              }
+     </script>
     <div id="WelcomeAndPlay">         
         
         <div id="game">
+             <div id="inspirations">While keywords between users may be the same, our individual experiences create the context.</div>
              <canvas id="Surface" width="1024" height="568"></canvas>
              	
                 <script type="text/javascript" src="gameplay.js"></script>
@@ -37,7 +48,7 @@
              		<div id="bigLogo"></div><div class="clearfloat"></div>
              </div>
              <div id="formDiv">
-             	<form name="questionForm" method="GET" action="/" id="myform" autocomplete="off" >
+             	<form name="questionForm" method="GET" action="/" id="myform" autocomplete="off">
                 	<p>I want to think about...</p>
                 	<input id="form1input" class="input" type="text" name="question" ></input>
                 	<input type="submit" class="submit" name="ideaSubmit" id="think" value="Think!" ></input>
