@@ -5,7 +5,7 @@ f<!DOCTYPE html>
 <meta name="apple-mobile-web-app-capable" content="yes" />
 <meta name="viewport" content="user-scalable=no, width=device-width" />
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<link href="ocean.css" rel="stylesheet" type="text/css">
+<link href="people.css" rel="stylesheet" type="text/css">
 <script src="http://code.jquery.com/jquery-1.6.3.min.js"></script>
 <script src="scripts/OceanIdeas.js" type="text/javascript"></script>
 <title>Ocean</title>
