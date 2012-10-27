@@ -94,9 +94,9 @@ function dropIdea(ideaID, e) {
 	for ($i = 1; $i <= $num_submissions; $i++) {
 		$idea = $ideas[$i - 1];
 		
-	?> <div class="idea" id="idea<? echo $i ?>">
-    		<div class="ideaImage">
-            	<img id="<? echo "img", $i ?>" src="images/oceanIdeas<?php echo rand(1, 2) ?>.png" onmousedown="grabIdea(<?php echo $i ?>, event)" onmouseup="dropIdea(<?php echo $i ?>, event)" onclick="toggleText(<?php echo $i ?>)" ontouchmove="event.preventDefault();" />
+	?> <div class="person" id="person<? echo $i ?>">
+    		<div class="personImage">
+            	<img src="images/anonymous.jpg" />
                 <div class="ideaName"><?php echo $idea["username"]; ?></div>
             </div>
             <div class="toggleContent" id="content<?php echo $i ?>">
@@ -107,48 +107,9 @@ function dropIdea(ideaID, e) {
                     <div class="ideaIdea"><h2><?php echo $idea["useredge"]; ?></h2></div>
                     <div class="ideaQueries"><h3>Queries: <?php echo $idea["usercloud"]; ?></h3></div>
                 </div>
-                <div class="ideaConcepts1">
-                    <div class="concept1">
-                        <?php echo $idea["concept1"]; ?>
-                    </div>
-                    <div class="clearR"></div>
-                    <div class="concept2">
-                        <?php echo $idea["concept2"]; ?>
-                    </div>
-                    <div class="clearR"></div>
-                    <div class="concept3">
-                        <?php echo $idea["concept3"]; ?>
-                    </div>
-                    <div class="clearR"></div>
-                    <div class="concept4">
-                        <?php echo $idea["concept4"]; ?>
-                    </div>
-                </div>
-                <div class="ideaConcepts2">
-                    <div class="concept5">
-                        <?php echo $idea["concept5"]; ?>
-                    </div>
-                    <div class="clearL"></div>
-                    <div class="concept6">
-                        <?php echo $idea["concept6"]; ?>
-                    </div>
-                    <div class="clearL"></div>
-                    <div class="concept7">
-                        <?php echo $idea["concept7"]; ?>
-                    </div>
-                    <div class="clearL"></div>
-                    <div class="concept8">
-                        <?php echo $idea["concept8"]; ?>
-                    </div>
-                </div>
             </div>
         </div>
         <script type="text/javascript"> 
-		$('#content<? echo $i ?>').css('display', 'none');
-		$('#idea<? echo $i ?>').css('top', '<? echo rand(115, 2000); ?>px');
-		$('#idea<? echo $i ?>').css('left', '<? echo rand(115, 2000); ?>px'); 
-		var <? echo "mov", $i ?> = new Entity(<? echo $i ?>);
-		this.ocean.addEntity(<? echo "mov", $i ?>);
         </script>
 	<?php }?>
 </body>

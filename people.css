@@ -50,7 +50,7 @@ margin:none;
 font-weight: bold;
 }
 
-.idea { position: absolute; display: block; width: 420px; height: 500px; overflow: visible; top: 100px; left: 100px; }
+.person { display: block; float:left; width: 420px; height: 500px; overflow: visible; top: 100px; left: 100px; }
 
 .ideaImage {position: absolute; left: 152px; top: 230px; z-index: 5;}
 .ideaName {text-align:center; }
@@ -67,7 +67,7 @@ font-weight: bold;
 
 .ideaIdea {display:block; height:80px; overflow-y:scroll; }
 
-.toggleContent {position: absolute; display: block; width: 360px; height: 500px; background: url(images/IdeaBG.png) no-repeat top left; padding: 0 30px 0 30px;}
+.toggleContent {position: absolute; display: block; width: 360px; height: 500px; no-repeat top left; padding: 0 30px 0 30px;}
 
 #timelineWrapper {display:block; width:1024px; height:57px; margin: 0 auto; color:#FFF; }
 #timeline {display:block; width:1024px; height:57px; margin: 0 auto; font-family:  'HelveticaLTStdBold'; position: fixed; background: url(images/full-timeline-bg.png) no-repeat top left;}
