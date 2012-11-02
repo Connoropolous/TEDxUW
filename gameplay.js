@@ -282,7 +282,7 @@ Background.prototype.draw = function(ctx) {
 function Glimmer(game)
 {
 	Entity.call(this, game, -4, -113);
-	this.sprite = ASSET_MANAGER.getAsset('images/glimmer.png');
+	this.sprite = ASSET_MANAGER.getAsset('images/Xicon.png');
     this.radius = 40;
 	this.vx = 0;
 	this.vy = 0;
@@ -552,7 +552,7 @@ ASSET_MANAGER.queueDownload('images/ConstantStreamGradient.png');
 ASSET_MANAGER.queueDownload('images/bg_menu.png');
 ASSET_MANAGER.queueDownload('images/LoopStream.png');
 ASSET_MANAGER.queueDownload('images/LoopStream_peters2.png');
-ASSET_MANAGER.queueDownload('images/glimmer.png');
+ASSET_MANAGER.queueDownload('images/Xicon.png');
 ASSET_MANAGER.queueDownload('images/Picture1.png');
  
 // initialize inspirations
