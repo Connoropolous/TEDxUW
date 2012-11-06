@@ -10,7 +10,6 @@
      <script src="http://cdn.jquerytools.org/1.2.6/jquery.tools.min.js"></script>
      <script type="text/javascript" src="http://ajax.microsoft.com/ajax/jquery.validate/1.7/jquery.validate.min.js"></script>
      <script type="text/javascript" src="scripts/jquery.backgroundpos.min.js"></script>
-     <script src="http://www.google.com/jsapi?key=AIzaSyA5m1Nc8ws2BbmPRwKu5gFradvD_hgq6G0" type="text/javascript"></script>
      <script type="text/javascript" src="scripts/http.js"></script> 
 
 	<?php
@@ -33,7 +32,6 @@
     <div id="WelcomeAndPlay">         
         
         <div id="game">
-             <div id="inspirations">While keywords between users may be the same, our individual experiences create the context.</div>
              <canvas id="Surface" width="1024" height="568"></canvas>
              	
                 <script type="text/javascript" src="gameplay.js"></script>
@@ -47,9 +45,14 @@
              		<div class="clearfloat"></div>
              </div>
              <div id="formDiv">
+             	<h1 class="title">Define your <span class="red">edge</span></h1>
+                <p class="explanation">This installation is designed to help you identify and explore what gives you an edge. Choose words that you feel <br><span class="red">connect with your successes or potential.</span></p>
              	<form name="emailForm" method="GET" action="/" id="myform" autocomplete="off">
-                	<p>Enter your email...</p>
+                	<label for="form1input">Enter your email address to begin:</label>
                 	<input id="form1input" class="input" type="text" name="email" ></input>
+                    <div class="clearfloat"></div>
+                	<label for="form1checkbox">Check this box if you don't want us to share your TEDxUW photo alongside your <span class="red">edge</span> statement: </label>
+                	<input id="form1checkbox" type="checkbox" name="photoPermission" ></input>
                 	<input type="submit" class="submit" name="emailSubmit" id="email" value="Get Started" ></input>
              	</form>
              </div>           

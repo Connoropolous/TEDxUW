@@ -28,6 +28,10 @@ body {background:#000; color: #FFF; font-family:'HelveticaLTStdRoman', Helvetica
 a, a:hover, a.active {color: #FFF; text-decoration:none; }
 img {border:none;}
 
+h1.title { font-weight:normal; font-size: 85px; margin-top: 0;}
+
+.red { color:#ed3624; font-weight:bold; }
+
 .clearfloat {clear:both; }
 
 #WelcomeAndPlay {display:block; width:1024px; height:568px; position:relative; margin:0 auto;}
@@ -44,17 +48,6 @@ img {border:none;}
 	z-index:-1;
 }
 
-#inspirations {
-	display:none;
-	position:absolute;
-	width:260px;
-	height:72px;
-	left:624px;	
-	background:url(images/bubbles.png) no-repeat top left;
-	z-index:5;
-	padding: 70px 60px 80px 80px;
-}
-
 #gameTitleDiv {
 	position:absolute;
 	display:block;
@@ -68,10 +61,9 @@ img {border:none;}
 
 #gameTitleDiv label {font-size:20px;}
 
+#form1input { margin:30px 0 30px 20px; }
+
 #formDiv {
-	position:absolute;
-    top:240px;
-	left:50px;
 	width:924px;
 	height:250px;
 	z-index:1;
@@ -84,7 +76,8 @@ img {border:none;}
 	   }
 	   
 	   #formDiv p, #formDiv label {
-		   font-size:20px;
+		   font-size:32px;
+		   line-height:34px; 
 		   -webkit-margin-before: 0em;
 			-webkit-margin-after: 0em;
 			-webkit-margin-start: 0px;
@@ -93,25 +86,30 @@ img {border:none;}
 		   }
 	   	   
 	  .input {
-		  width:924px;
-		  height:38px;
+		  width:300px;
+		  height:22px;
 		  background:#FFF;
 		  color:#000; 
-		  font-size: 24px;
+		  font-size: 20px;
 		  font-family:'HelveticaLTStdRoman', Helvetica, sans-serif;
 		  outline:none;
-		  opacity:0.4;
-	   }
-	   
-	   #formDiv .input {
-			margin-top:0px;   
+		  border-radius: 10px;
+		  padding: 4px 5px;
 	   }
 	   
 	  .submit {
 		  position:absolute;
-		  top:110px;
+		  top:470px;
+		  left:788px;
+		  display:block; 
+		  height:150px;
+		  width:150px;
+		  text-indent:-9999px;
+		  background: url(images/Button.png) no-repeat top left;
 		  font-size: 30px;
 		  cursor:pointer;
+		  border:none;
+		  outline:none;
 	  }
 	  
 .myform label {margin:none;}
@@ -125,6 +123,7 @@ img {border:none;}
 #formconcept6Hidden {display: none;}
 #formconcept7Hidden {display: none;}
 #formconcept8Hidden {display: none;}
+#formPhotoPermissionHidden {display: none;}
 #formUseredgeNotHidden {display: block; width: 422px; margin-top:15px; height:24px; font-size:18px;}
 #formUsernameNotHidden {display: block; width: 422px; margin-top:15px; height:24px; font-size:18px;}
 #formUseremailHidden {display: none;}
