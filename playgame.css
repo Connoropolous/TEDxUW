@@ -63,6 +63,8 @@ h1.title { font-weight:normal; font-size: 85px; margin-top: 0;}
 
 #form1input { margin:30px 0 30px 20px; }
 
+.logo { margin:50px 0px; }
+
 #formDiv {
 	width:924px;
 	height:250px;
@@ -99,17 +101,21 @@ h1.title { font-weight:normal; font-size: 85px; margin-top: 0;}
 	   
 	  .submit {
 		  position:absolute;
-		  top:470px;
-		  left:788px;
+		  top:445px;
+		  left:700px;
 		  display:block; 
 		  height:150px;
 		  width:150px;
 		  text-indent:-9999px;
-		  background: url(images/Button.png) no-repeat top left;
+		  background: url(images/Button.png) no-repeat 0px -150px;
 		  font-size: 30px;
 		  cursor:pointer;
 		  border:none;
 		  outline:none;
+	  }
+	  
+	  .submit:hover {
+		  background-position: 0px 0px;  
 	  }
 	  
 .myform label {margin:none;}

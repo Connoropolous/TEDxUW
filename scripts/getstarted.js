@@ -104,6 +104,13 @@ for (var i = 1; i < 9; i++) {
 
 function WelcomeScreen() {
 	
+		$('#email').bind('touchstart', function() {
+			$('#email').css('background-position','0px 0px');
+		});
+		$('#email').bind('touchend', function() {
+			$('#email').css('background-position','0px -150px');
+		});
+			  
 	    // draw the background image
 		//ctx.drawImage(ASSET_MANAGER.getAsset('images/LoopStream_peters2.png'), 0, 0, 1024, 568);	
 		

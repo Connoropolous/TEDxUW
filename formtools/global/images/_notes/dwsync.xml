@@ -15,4 +15,19 @@
 <file name="loading.gif" server="ftp.householdasecology.org//public_html/indigodesign.me/game/" local="129606462780000000" remote="129606574200000000" />
 <file name="loading_small.gif" server="ftp.householdasecology.org//public_html/indigodesign.me/game/" local="129606462780000000" remote="129606574200000000" />
 <file name="open_new_window.png" server="ftp.householdasecology.org//public_html/indigodesign.me/game/" local="129606462780000000" remote="129606574200000000" />
+<file name="alert.png" server="ftp.householdasecology.org" local="129805408840000000" remote="129969729600000000" />
+<file name="calendar.png" server="ftp.householdasecology.org" local="129805408840000000" remote="129969729600000000" />
+<file name="clock.png" server="ftp.householdasecology.org" local="129805408840000000" remote="129969729600000000" />
+<file name="error.png" server="ftp.householdasecology.org" local="129805408840000000" remote="129969729600000000" />
+<file name="group_block.png" server="ftp.householdasecology.org" local="129805408840000000" remote="129969729600000000" />
+<file name="group_block_connect.png" server="ftp.householdasecology.org" local="129805408840000000" remote="129969729600000000" />
+<file name="group_block_disconnect.png" server="ftp.householdasecology.org" local="129805408840000000" remote="129969729600000000" />
+<file name="index.php" server="ftp.householdasecology.org" local="129805408840000000" remote="129969729600000000" />
+<file name="info.png" server="ftp.householdasecology.org" local="129805408840000000" remote="129969729600000000" />
+<file name="info_small.png" server="ftp.householdasecology.org" local="129805408840000000" remote="129969729600000000" />
+<file name="lang_placeholder_field_icon.gif" server="ftp.householdasecology.org" local="129805408840000000" remote="129969729600000000" />
+<file name="lang_placeholder_field_icon.png" server="ftp.householdasecology.org" local="129805408840000000" remote="129969729600000000" />
+<file name="loading.gif" server="ftp.householdasecology.org" local="129805408840000000" remote="129969729600000000" />
+<file name="loading_small.gif" server="ftp.householdasecology.org" local="129805408840000000" remote="129969729600000000" />
+<file name="open_new_window.png" server="ftp.householdasecology.org" local="129805408840000000" remote="129969729600000000" />
 </dwsync>
