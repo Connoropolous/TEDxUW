@@ -5,27 +5,91 @@
 		createCloud.setAttribute('value','submit');
 		createCloud.setAttribute('onclick','createEdge()');
 		
-		var dataUrl;
+		ZoomWrapper=document.createElement('div');
+		ZoomWrapper.setAttribute('id', 'zoomwrapper');
+		
+		
+		var usercloudVal;
 				
 function organizeCloud() {	
 		gameFinished = true;
         mouseCanMove = false;
 		$("#formDiv").html("This is the page where you organize your cloud.");
 		
-		
-		usercloud = canvas.toDataURL();
+		//usercloudVal = canvas.toDataURL();
+		//usercloud.setAttribute('value',usercloudVal);
 		
 		document.getElementById('formDiv').appendChild(createCloud);
+		
+		for (var i=1; i<=8; i++)
+		{
+			SpanText = document.createElement('span');
+			SpanText.setAttribute('id', 'TED' + i);
+			p = document.createElement('div');
+			p.setAttribute('class', 'polaroid');
+			p.appendChild(SpanText);
+			zoomprops=document.createElement('div');
+			zoomprops.setAttribute('id','zoom' + i);
+			zoomprops.setAttribute('class','zoomProps');
+			zoomprops.appendChild(p);
+			ZoomWrapper.appendChild(zoomprops);
+		}
+		
+		document.getElementById('formDiv').appendChild(ZoomWrapper);
+		
+		$(function(){
+        var zoom = new ZoomView('#zoom1','#zoom1 :first');
+		var zoom2 = new ZoomView('#zoom2','#zoom2 :first');
+		var zoom3 = new ZoomView('#zoom3','#zoom3 :first');
+		var zoom4 = new ZoomView('#zoom4','#zoom4 :first');
+		var zoom5 = new ZoomView('#zoom5','#zoom5 :first');
+		var zoom6 = new ZoomView('#zoom6','#zoom6 :first');
+		var zoom7 = new ZoomView('#zoom7','#zoom7 :first');
+		var zoom8 = new ZoomView('#zoom8','#zoom8 :first');
+		});
+		
+		updatetextfromarray();
 		
 		$('#formDiv').fadeIn('slow', function(){});
 }
 	
+function editNodeText(id, newText)
+{
+	var node = document.getElementById(id);
+	
+	while (node.firstChild)
+		node.removeChild(node.firstChild);
+	
+	node.appendChild(document.createTextNode(newText));
+	
+	if (Math.random() > 0.5)
+	{
+		document.getElementById(id).style.color = "red";
+	}
+}
+function updatetextfromarray()
+{
+	var words = ["test1", "test2", "test3", "test4", "test5", "test6", "test7", "test8"]
+	for (var i=1;i<words.length+1;i++)
+	{
+		var id = "TED" + i;
+		editNodeText(id, words[i-1]);
+	}
+}
+	
 function createEdge() {
-		
-	alert(usercloud); 
+	
+	var html2obj = html2canvas($('body'));
 
-	window.open(usercloud, "toDataURL() image", "width=600, height=200");	
-		
+	var queue  = html2obj.parse();
+	var wordcloud = html2obj.render(queue);
+	usercloudVal = wordcloud.toDataURL();
+	usercloud.setAttribute('value',usercloudVal);
+	
+	//alert(usercloudVal); 
+
+	//window.open(usercloudVal, "toDataURL() image", "width=600, height=200");	
+	
 	document.getElementById('formDiv').removeChild(createCloud);
 
 	$("#formDiv").html("This is the page where you identify your edge.");

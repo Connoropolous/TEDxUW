@@ -141,3 +141,59 @@ h1.title { font-weight:normal; font-size: 85px; margin-top: 0;}
 	font-family:'HelveticaLTStdRoman', Helvetica, sans-serif;
 	cursor:pointer;
 	}
+	
+#zoom1 {
+
+}
+
+#zoom2 {
+	top:50px;
+}
+
+#zoom3 {
+	top:100px;
+}
+
+#zoom4 {
+	top:150px;
+}
+
+#zoom5 {
+	top:200px;
+}
+
+#zoom6 {
+	top:250px;
+}
+
+#zoom7 {
+	top:300px;
+}
+
+#zoom8 {
+	top:350px;
+}
+
+.zoomProps{	  
+	height: 0px;
+	width: 0px;
+	position:absolute;
+}
+	
+#zoomwrapper {
+	height: 600px;
+	width: 600px;
+	overflow: hidden;   
+}
+		  
+.polaroid{
+	text-align: center;
+	opacity: 0
+	-moz-box-shadow: 0px 2px 15px #333;
+	-webkit-box-shadow:	0px 2px 15px #333;
+	font-family:"Helvetica";
+	font-size:24px;
+	color:#FFFFFF;
+	text-shadow:#333;
+}
+	
