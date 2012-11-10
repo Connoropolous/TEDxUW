@@ -23,6 +23,8 @@ background-color: black;
 
 }
 
+
+
 	iframe{ 
 	zoom: 1;
 	-moz-transform: scale(0.7);
@@ -31,6 +33,7 @@ background-color: black;
 	-o-transform-origin: 0 0;
 	-webkit-transform: scale(.7);
 	-webkit-transform-origin: 0 0;
+	
 
 }
 </style>
