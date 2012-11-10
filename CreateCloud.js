@@ -43,12 +43,12 @@ $(function(){
 		  //console.log('last drag x:' + this.lastDrag.pos.x);
 		  //console.log('this drag x:' + this.drag[d].pos.x);
 
-          //var x_offset = -(this.lastDrag.pos.x - this.drag[d].pos.x);
-          //var y_offset = -(this.lastDrag.pos.y - this.drag[d].pos.y);
+          var x_offset = -(this.lastDrag.pos.x - this.drag[d].pos.x);
+          var y_offset = -(this.lastDrag.pos.y - this.drag[d].pos.y);
 
-          //left = left + x_offset;
+          left = left + x_offset;
 		 // console.log('left offset:' + x_offset);
-          //top = top + y_offset;
+          top = top + y_offset;
 		  //console.log('top offset:' + y_offset);
 
           this.lastDrag = this.drag[d];
