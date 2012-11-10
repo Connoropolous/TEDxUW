@@ -34,12 +34,12 @@ h1.title { font-weight:normal; font-size: 85px; margin-top: 0;}
 
 .clearfloat {clear:both; }
 
-#WelcomeAndPlay {display:block; width:1024px; height:568px; position:relative; margin:0 auto;}
+#WelcomeAndPlay {display:block; width:1024px; height:768px; position:relative; margin:0 auto;}
 
-#introVideo {display: block; position: absolute; overflow: hidden; margin: 0 auto; width:1024px; height: 568px; z-index: 10;}
+#introVideo {display: block; position: absolute; overflow: hidden; margin: 0 auto; width:1024px; height: 768px; z-index: 10;}
 #skipIntro { position:absolute; top: 5px; left: 0px; }
 
-#game {display:none; position: absolute; width:1024px; height: 568px; margin: 0 auto; background:#000; z-index:0; }
+#game {display:none; position: absolute; width:1024px; height: 768px; margin: 0 auto; background:#000; z-index:0; }
 
 #Surface{
 	position:absolute;

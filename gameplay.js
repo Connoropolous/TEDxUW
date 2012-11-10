@@ -264,7 +264,7 @@ function Background(game, x, y)
 	this.x = 0;
 	this.y = 0;
 	this.width1 = 1024;
-	this.height1 = 568;
+	this.height1 = 768;
 }
 Background.prototype = new Entity();
 Background.prototype.constructor = Background;
@@ -273,7 +273,7 @@ Background.prototype.update = function() {
 		if (bgMoving) {
 			if (this.width1 > 2048) {
 				this.width1 = 1024;
-				this.height1 = 568;
+				this.height1 = 768;
 			}
 			this.width1*=1.008;
 			this.height1*=1.008;

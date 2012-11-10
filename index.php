@@ -37,7 +37,7 @@
     <div id="WelcomeAndPlay">         
         
         <div id="game">
-             <canvas id="Surface" width="1024" height="568"></canvas>
+             <canvas id="Surface" width="1024" height="768"></canvas>
              	
                 <script type="text/javascript" src="gameplay.js"></script>
                 <script type="text/javascript" src="scripts/wordlist.js"></script>
