@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<dwsync>
+<file name="Address.php" server="ftp.householdasecology.org" local="129805408840000000" remote="129969730800000000" />
+<file name="AddressContainer.php" server="ftp.householdasecology.org" local="129805408840000000" remote="129969730800000000" />
+<file name="Authenticator.php" server="ftp.householdasecology.org" local="129805408840000000" remote="129969730800000000" />
+<file name="BadResponseException.php" server="ftp.householdasecology.org" local="129805408840000000" remote="129969730800000000" />
+<file name="BatchMailer.php" server="ftp.householdasecology.org" local="129805408840000000" remote="129969730800000000" />
+<file name="Cache.php" server="ftp.householdasecology.org" local="129805408840000000" remote="129969730800000000" />
+<file name="CacheFactory.php" server="ftp.householdasecology.org" local="129805408840000000" remote="129969730800000000" />
+<file name="ClassLoader.php" server="ftp.householdasecology.org" local="129805408840000000" remote="129969730800000000" />
+<file name="Connection.php" server="ftp.householdasecology.org" local="129805408840000000" remote="129969730800000000" />
+<file name="ConnectionBase.php" server="ftp.householdasecology.org" local="129805408840000000" remote="129969730800000000" />
+<file name="ConnectionException.php" server="ftp.householdasecology.org" local="129805408840000000" remote="129969730800000000" />
+<file name="Errors.php" server="ftp.householdasecology.org" local="129805408840000000" remote="129969730800000000" />
+<file name="Events.php" server="ftp.householdasecology.org" local="129805408840000000" remote="129969731400000000" />
+<file name="Exception.php" server="ftp.householdasecology.org" local="129805408840000000" remote="129969731400000000" />
+<file name="File.php" server="ftp.householdasecology.org" local="129805408840000000" remote="129969731400000000" />
+<file name="FileException.php" server="ftp.householdasecology.org" local="129805408840000000" remote="129969731400000000" />
+<file name="Log.php" server="ftp.householdasecology.org" local="129805408840000000" remote="129969731400000000" />
+<file name="LogContainer.php" server="ftp.householdasecology.org" local="129805408840000000" remote="129969731400000000" />
+<file name="Message.php" server="ftp.householdasecology.org" local="129805408840000000" remote="129969731400000000" />
+<file name="RecipientList.php" server="ftp.householdasecology.org" local="129805408840000000" remote="129969731400000000" />
+</dwsync>

@@ -4,4 +4,9 @@
 <file name="forget_password.php" server="ftp.householdasecology.org//public_html/indigodesign.me/game/" local="129606573600000000" remote="129606573600000000" />
 <file name="index.php" server="ftp.householdasecology.org//public_html/indigodesign.me/game/" local="129606462780000000" remote="129606574800000000" />
 <file name="process.php" server="ftp.householdasecology.org//public_html/indigodesign.me/game/" local="129651515617138274" remote="129651551400000000" />
+<file name=".DS_Store" server="ftp.householdasecology.org" local="129952434011441292" remote="129969729000000000" />
+<file name="error.php" server="ftp.householdasecology.org" local="129805408840000000" remote="129969729000000000" />
+<file name="forget_password.php" server="ftp.householdasecology.org" local="129805408840000000" remote="129969729000000000" />
+<file name="index.php" server="ftp.householdasecology.org" local="129805408840000000" remote="129969729600000000" />
+<file name="process.php" server="ftp.householdasecology.org" local="129805408840000000" remote="129969731400000000" />
 </dwsync>

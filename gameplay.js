@@ -138,13 +138,25 @@ var eListener1 = null;
 var eListener2 = null;
 
 GameEngine.prototype.startInput = function() {
-    var getXandY = function(e) {
+    
+	var that = this;
+	
+	var getXandY = function(e) {
         var x =  e.clientX - that.ctx.canvas.getBoundingClientRect().left - (that.ctx.canvas.width/2);
         var y = e.clientY - that.ctx.canvas.getBoundingClientRect().top - (that.ctx.canvas.height/2);
         return {x: x, y: y};
     }
-    
-    var that = this;
+	
+	// create a function to pass touch events and coordinates to drawer
+	var getTouchXandY = function(event){
+	   // get the touch coordinates
+	   var coors = {
+		  x: event.targetTouches[0].pageX - that.ctx.canvas.getBoundingClientRect().left - (that.ctx.canvas.width/2),
+		  y: event.targetTouches[0].pageY - that.ctx.canvas.getBoundingClientRect().top - (that.ctx.canvas.height/2)
+	   };
+	   // pass the coordinates to the appropriate handler
+	   that.mouse = coors;
+	}
     
     this.ctx.canvas.addEventListener("click", function(e) {
 		console.log("clicked");
@@ -157,6 +169,11 @@ GameEngine.prototype.startInput = function() {
 		e.preventDefault();
         that.mouse = getXandY(e);
     }, false);
+	
+	// attach the touchstart, touchmove, touchend event listeners.
+	this.ctx.canvas.addEventListener('touchstart',getTouchXandY, false);
+	this.ctx.canvas.addEventListener('touchmove',getTouchXandY, false);
+	this.ctx.canvas.addEventListener('touchend',getTouchXandY, false);
 }
 
 GameEngine.prototype.addEntity = function(entity) {
@@ -282,7 +299,7 @@ Background.prototype.draw = function(ctx) {
 function Glimmer(game)
 {
 	Entity.call(this, game, -4, -113);
-	this.sprite = ASSET_MANAGER.getAsset('images/glimmer.png');
+	this.sprite = ASSET_MANAGER.getAsset('images/Xicon.png');
     this.radius = 40;
 	this.vx = 0;
 	this.vy = 0;
@@ -490,25 +507,6 @@ Streme.prototype.update = function() {
 		 }
 	}
 	//this.timeleft --;
-    
-	// add new inspiration
-	if (inspirationTracker < 11) {
-		if (((mouseCanMove && this.lastInspirationAddedAt == null) || (this.timer.gameTime - this.lastInspirationAddedAt) > 25) && !gameFinished) {
-			var value = inspirations[inspirationTracker];
-					
-			$('#inspirations').html(value);
-			$('#inspirations').fadeIn('slow',
-				function() {
-					$('#inspirations').delay(4000).fadeOut('slow')
-				});	
-			
-			inspirationTracker+=1; 
-			
-			console.log("added an inspiration"); 
-			
-			this.lastInspirationAddedAt = this.timer.gameTime;
-		}
-	}
 	
 	// end game when...
     if ((game.glimmer.conceptSpotWords.length == 8 && !gameFinished) || gameFinished) {
@@ -537,8 +535,6 @@ Streme.prototype.drawTime = function() {
 var game = new Streme();
 var ASSET_MANAGER = new AssetManager();
 var words = [];
-var inspirations = [];
-var inspirationTracker = 0; 
 var pauseGame = false;
 var mouseCanMove = null;
 var bgMoving = true;
@@ -552,20 +548,7 @@ ASSET_MANAGER.queueDownload('images/ConstantStreamGradient.png');
 ASSET_MANAGER.queueDownload('images/bg_menu.png');
 ASSET_MANAGER.queueDownload('images/LoopStream.png');
 ASSET_MANAGER.queueDownload('images/LoopStream_peters2.png');
-ASSET_MANAGER.queueDownload('images/glimmer.png');
+ASSET_MANAGER.queueDownload('images/Xicon.png');
 ASSET_MANAGER.queueDownload('images/Picture1.png');
- 
-// initialize inspirations
-inspirations.push("Gravitate towards words that inspire your idea, leave the rest behind.");
-inspirations.push("Where you start won't always be where you end up.");
-inspirations.push("Use this as an enlightening experience of the human thought process.");
-inspirations.push("'Imagination is more important than knowledge' Albert Einstein");
-inspirations.push("There's no need to know the answer, just let the words inspire you.");
-inspirations.push("Focus on the process, do not worry about the outcome.");
-inspirations.push("While keywords between users may be the same, our individual experiences create the context.");
-inspirations.push("Hearing or reading new words leads to new concepts .");
-inspirations.push("Awe, inspire and enlighten.");
-inspirations.push("Welcome the unexpected intersection of seemingly unrelated words.");
-inspirations.push("Add your diverse voice to the Ocean of Ideas.");
 
 

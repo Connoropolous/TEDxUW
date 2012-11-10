@@ -4,17 +4,27 @@
 		createCloud=document.createElement('button');
 		createCloud.setAttribute('value','submit');
 		createCloud.setAttribute('onclick','createEdge()');
+		
+		var dataUrl;
 				
 function organizeCloud() {	
 		gameFinished = true;
         mouseCanMove = false;
 		$("#formDiv").html("This is the page where you organize your cloud.");
+		
+		
+		usercloud = canvas.toDataURL();
+		
 		document.getElementById('formDiv').appendChild(createCloud);
 		
 		$('#formDiv').fadeIn('slow', function(){});
 }
 	
 function createEdge() {
+		
+	alert(usercloud); 
+
+	window.open(usercloud, "toDataURL() image", "width=600, height=200");	
 		
 	document.getElementById('formDiv').removeChild(createCloud);
 

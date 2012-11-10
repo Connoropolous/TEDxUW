@@ -4,7 +4,7 @@ var ctx = canvas.getContext('2d');
 
 ASSET_MANAGER.downloadAll(function() {
 	  		$('#game').css('display','block');
-	  		$('#game').css('background', 'url(images/LoopStream_peters2.png) no-repeat top left');
+	  		//$('#game').css('background', 'url(images/LoopStream_peters2.png) no-repeat top left');
 	  		game.init(ctx);
 	  		WelcomeScreen();
 		});
@@ -73,13 +73,7 @@ for (var i = 1; i < 9; i++) {
 	photoPermission=document.createElement('input');
 	photoPermission.setAttribute('name','photoPermission');
 	photoPermission.setAttribute('type','checkbox');
-	photoPermission.setAttribute('id','formPhotoPermissionNotHidden');
-	photoPermission.setAttribute('value','agree');
-	
-	photoPermissionLabel=document.createElement('label');
-	var quickText = document.createTextNode("TEDxUW can use my photo.");
-	photoPermissionLabel.setAttribute('for','formPhotoPermissionNotHidden');
-	photoPermissionLabel.appendChild(quickText);
+	photoPermission.setAttribute('id','formPhotoPermissionHidden');
 	
 	userSubmit=document.createElement('input');
 	userSubmit.setAttribute('name','finalSubmit');
@@ -102,7 +96,6 @@ for (var i = 1; i < 9; i++) {
 	UserSubmitForm.appendChild(username);
 	UserSubmitForm.appendChild(useremail);
 	UserSubmitForm.appendChild(photoPermission);
-	UserSubmitForm.appendChild(photoPermissionLabel);
 	UserSubmitForm.appendChild(userSubmit);
      
  
@@ -111,8 +104,15 @@ for (var i = 1; i < 9; i++) {
 
 function WelcomeScreen() {
 	
+		$('#email').bind('touchstart', function() {
+			$('#email').css('background-position','0px 0px');
+		});
+		$('#email').bind('touchend', function() {
+			$('#email').css('background-position','0px -150px');
+		});
+			  
 	    // draw the background image
-		ctx.drawImage(ASSET_MANAGER.getAsset('images/LoopStream_peters2.png'), 0, 0, 1024, 568);	
+		//ctx.drawImage(ASSET_MANAGER.getAsset('images/LoopStream_peters2.png'), 0, 0, 1024, 568);	
 		
 		// don't let them proceed unless they enter a valid email.
 		$("#myform").validate({
@@ -128,8 +128,13 @@ function WelcomeScreen() {
 				mouseCanMove = true;
 				
 				var i = 0;
-				var tempquery = $('#form1input').attr('value');
-				useremail.setAttribute('value',tempquery);
+				var tempquery1 = $('#form1input').attr('value');
+				useremail.setAttribute('value',tempquery1);
+				
+				var tempquery2 = $('#form1checkbox').attr('checked');
+				if ( tempquery2 === "checked" )  {
+					photoPermission.setAttribute('checked',tempquery2);
+				}
 				
 				document.getElementById('formDiv').innerHTML = '';
 				$('#formDiv').css('display','none');

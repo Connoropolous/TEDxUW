@@ -1,5 +1,4 @@
 function strload(str) {
-	console.log("loaded string");
 	
 	thisURL = "https://data.primal.com/ted@Everything/" + str;
 	
