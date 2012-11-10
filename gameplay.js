@@ -511,6 +511,8 @@ Streme.prototype.update = function() {
 	// end game when...
     if ((game.glimmer.conceptSpotWords.length == 8 && !gameFinished) || gameFinished) {
 		if (!doneSwitch) {
+			$('#Surface').remove()
+			collectedWords = game.glimmer.conceptSpotWords;
 			organizeCloud();
 			doneSwitch = true;
 		}

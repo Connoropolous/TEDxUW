@@ -48,7 +48,7 @@ function organizeCloud() {
 		var zoom8 = new ZoomView('#zoom8','#zoom8 :first');
 		});
 		
-		updatetextfromarray();
+		updatetextfromarray(collectedWords);
 		
 		$('#formDiv').fadeIn('slow', function(){});
 }
@@ -67,13 +67,12 @@ function editNodeText(id, newText)
 		document.getElementById(id).style.color = "red";
 	}
 }
-function updatetextfromarray()
+function updatetextfromarray(collected)
 {
-	var words = ["test1", "test2", "test3", "test4", "test5", "test6", "test7", "test8"]
-	for (var i=1;i<words.length+1;i++)
+	for (var i=1;i<collected.length+1;i++)
 	{
 		var id = "TED" + i;
-		editNodeText(id, words[i-1]);
+		editNodeText(id, collected[i-1]);
 	}
 }
 	
@@ -85,10 +84,6 @@ function createEdge() {
 	var wordcloud = html2obj.render(queue);
 	usercloudVal = wordcloud.toDataURL();
 	usercloud.setAttribute('value',usercloudVal);
-	
-	//alert(usercloudVal); 
-
-	//window.open(usercloudVal, "toDataURL() image", "width=600, height=200");	
 	
 	document.getElementById('formDiv').removeChild(createCloud);
 

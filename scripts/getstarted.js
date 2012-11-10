@@ -15,6 +15,9 @@ var createCloud;
 // variables for the form which will submit to the database if they click donate
 var formId, UserSubmitForm, usercloud, useredge, username, useremail, photoPermission, photoPermissionLabel, userSubmit;
 
+// variable which will be passed to the rearrange words screen
+var collectedWords;
+
 var addTheConcepts = new Array(8);
 for (var i = 1; i < 9; i++) {
 	addTheConcepts[i - 1] = eval("var concept"+(i));

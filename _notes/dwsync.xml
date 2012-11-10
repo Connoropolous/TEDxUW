@@ -4,11 +4,11 @@
 <file name="process.php" server="ftp.householdasecology.org//public_html/indigodesign.me/game/" local="129651511306181702" remote="129651547800000000" />
 <file name="gameplay.js" server="ftp.householdasecology.org//public_html/indigodesign.me/game/" local="129678453151351670" remote="129678489000000000" />
 <file name="index.php" server="ftp.householdasecology.org//public_html/indigodesign.me/game/" local="129722639897716201" remote="129722640000000000" />
-<file name="people.css" server="ftp.householdasecology.org" local="129970465344678240" remote="129970501200000000" />
+<file name="people.css" server="ftp.householdasecology.org" local="129970499506302173" remote="129970536600000000" />
 <file name="playgame.css" server="ftp.householdasecology.org" local="129970449436718356" remote="129970485600000000" />
-<file name="gameplay.js" server="ftp.householdasecology.org" local="129970423874936306" remote="129970467600000000" />
+<file name="gameplay.js" server="ftp.householdasecology.org" local="129970504097804792" remote="129970542000000000" />
 <file name="index.php" server="ftp.householdasecology.org" local="129970429776423852" remote="129970467600000000" />
-<file name="people.php" server="ftp.householdasecology.org" local="129970423883336786" remote="129970501200000000" />
+<file name="people.php" server="ftp.householdasecology.org" local="129970499506832203" remote="129970536600000000" />
 <file name="process.php" server="ftp.householdasecology.org" local="129651511306181702" remote="129970467600000000" />
 <file name=".gitignore" server="ftp.householdasecology.org" local="129952434011421291" remote="129970467600000000" />
 <file name="README.md" server="ftp.householdasecology.org" local="129952238650320000" remote="129970449600000000" />
@@ -20,4 +20,5 @@
 <file name="jquery-1.7.2.min.js" server="ftp.householdasecology.org" local="129970429767123320" remote="129970467600000000" />
 <file name="jquery.hammer.js" server="ftp.householdasecology.org" local="129970429767403336" remote="129970467600000000" />
 <file name="jquery.plugin.html2canvas.js" server="ftp.householdasecology.org" local="129970429767473340" remote="129970467600000000" />
+<file name="people_frame.php" server="ftp.householdasecology.org" local="129970499507372234" remote="129970536600000000" />
 </dwsync>
