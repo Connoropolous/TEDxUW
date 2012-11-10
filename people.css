@@ -13,15 +13,12 @@ rgb(74, 74, 74)));
 }
 #mainCanvas {
 
-   width: 945px;
-   min-width: 945px;
-   height: 600px;
-   position: absolute;
-   left: 50%;
-   top: 50%; 
-   margin-left: -427.5px;
-   margin-top: -290px;
-   
+   width: 900px;
+   height: 718px;
+   position:absolute;
+   left:50%;
+   margin-left:-514px;
+   padding: 50px 62px 0px 62px;
 }
 #row1 {
 padding-bottom: 150px;}
@@ -33,13 +30,13 @@ padding-bottom: 150px;}
 	 position: absolute;
 	 width: 481px;
 	 left: 50%;
-	 margin-top: -15px;
+	 margin-top: 10px;
 	 margin-left: -280px;
 }
 
 .personGrandparent {
 	float: left;
-	margin-right: 5px;
+	margin-right: 8px;
 	 -moz-box-shadow:    inset 0 0 10px #000000;
    -webkit-b-webkit-box-shadow: 0px 10px 13px -8px grey;
 	   -moz-box-shadow: 0px 10px 13px -8px grey;
