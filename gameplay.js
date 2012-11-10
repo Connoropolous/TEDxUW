@@ -379,7 +379,6 @@ Concepts.prototype.constructor = Concepts;
 			if ((this.radius>12 && this.joinGlimmer() && this.game.glimmer.conceptSpotWords.length < 8) && mouseCanMove) {  /// PICKED UP AN IDEA
 				addTheConcepts[this.game.glimmer.conceptSpotWords.length].setAttribute('value',this.sprite);   // set the corresponding form Concept Spot to this concept's value. 
 				this.game.glimmer.conceptSpotWords.push(this.sprite);   // add the concept's value to the glimmer's word list
-				strload(this.sprite);  //  search primal for this word and add those words to our words array
 				this.removeFromWorld = true;   // remove the entity
 			}
 			else {
@@ -422,7 +421,7 @@ Concepts.prototype.constructor = Concepts;
 			ctx.beginPath();
 	    	ctx.arc(x, y, this.radius, 0, 2 * Math.PI, false);
  
-    		ctx.fillStyle = "#8ED6FF";
+    		ctx.fillStyle = "#FF3333";
     		ctx.fill();
 		}
 		
@@ -477,7 +476,6 @@ Streme.prototype.update = function() {
 				var value = words[wordFromArray];
 				words.splice(wordFromArray, 1);
 			}
-			if (value == "States") value = "Canada";
 			
 			this.addEntity(new Concepts(this, value, Math.floor(Math.random() * Math.PI * 2)));	
 			
@@ -515,7 +513,7 @@ Streme.prototype.update = function() {
 	// end game when...
     if ((game.glimmer.conceptSpotWords.length == 8 && !gameFinished) || gameFinished) {
 		if (!doneSwitch) {
-			realizeIt();
+			organizeCloud();
 			doneSwitch = true;
 		}
     }

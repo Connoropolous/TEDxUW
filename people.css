@@ -1,0 +1,84 @@
+/*
+xsmall : 1, 7, 8, 14,15,21,
+small : 2,6,9,13,16,20
+medium : 3,5,10,12,17,19
+large :4,11,18
+*/
+
+body {
+	background:-webkit-linear-gradient(#ededed 0%, #ffffff 57.62%);
+}
+#mainCanvas {
+	padding-left: 10%;
+	padding-top: 5%;
+	min-width: 1000px;
+	min-height: 600px;
+}
+#row1 {
+padding-bottom: 170px;}
+#row2 {
+padding-bottom: 170px;}
+#row3 {
+padding-bottom: 170px;}
+#navbar {
+	margin-left: 240px;
+}
+
+.personGrandparent {
+	float: left;
+	margin-right: 20px;
+
+}
+.personImage {
+	    
+          -webkit-mask-image:
+        -webkit-gradient(linear, left top, left bottom,
+
+            color-stop(0.18, rgba(0,0,0,1)),
+            color-stop(0.5, rgba(0,0,0,.5)),
+            color-stop(0.5, rgba(0,0,0,0.7)),
+            color-stop(0.55, rgba(0,0,0,.7)),
+            color-stop(1, rgba(0,0,0,1)));
+
+			
+             
+            -webkit-box-shadow: 0 8px 6px -6px black;
+            -moz-box-shadow: 0 8px 6px -6px black;
+	        box-shadow: 0 8px 6px -6px black;
+	        border: 3px solid #262626;
+}
+#person1 img, #person7 img{margin-top: 30px;}
+#person2 img, #person6 img{margin-top: 20px;}
+#person3 img, #person5 img{margin-top: 10px;}
+#person4 img            {margin-top: 0px;}
+
+#person8 img, #person14 img{margin-top: 15px;}
+#person9 img, #person13 img{margin-top: 10px;}
+#person10 img, #person12 img{margin-top: 5px;}
+#person11 img            {margin-top: 0px;}
+
+
+#prev {
+	background: url(images/previous.png);
+	background-repeat: no-repeat;
+	width: 139px;
+	height: 136px;
+	float:left;
+}
+#reload {
+	background: url(images/ted.png);
+	background-repeat: no-repeat;
+
+	width: 188px;
+	height: 136px;
+	float:left;
+}
+#next {
+	background: url(images/next.png);
+	background-repeat: no-repeat;
+	background-size: auto;
+	width: 140px;
+	height: 136px;
+	float:left;
+}
+
