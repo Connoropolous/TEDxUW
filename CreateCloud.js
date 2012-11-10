@@ -34,7 +34,7 @@ $(function(){
         }
 
         for(var d = 0; d<this.drag.length; d++) {
-          var left = $(this.drag[d].el).offset().left - 125.5;
+          var left = $(this.drag[d].el).offset().left - 125.5; //adjustments for canvas
           var top = $(this.drag[d].el).offset().top - 8;
 
           var x_offset = -(this.lastDrag.pos.x - this.drag[d].pos.x);
