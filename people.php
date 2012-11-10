@@ -1,4 +1,4 @@
-<html>
+<!DOCTYPE html>
 <html>
 <head>
 
@@ -7,41 +7,84 @@
 <meta name="apple-mobile-web-app-capable" content="yes" />
 <meta name="viewport" content="user-scalable=no, width=device-width" />
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link href="people.css" rel="stylesheet" type="text/css">
 <script src="http://code.jquery.com/jquery-1.6.3.min.js"></script>
 <script src="scripts/OceanIdeas.js" type="text/javascript"></script>
 <script src="scripts/jquery.easing.1.3.js" type="text/javascript"></script>
 
-<script src="scripts/jquery.zoomer.js" type="text/javascript"></script>
-
 <script src="peopleLoops/jquery.cycle.all.js" type="text/javascript"></script>
 
 <head>
-<style>
-body {
-	
-background-color: black;
-
-}
-
-
-
-	iframe{ 
-	zoom: 1;
-	-moz-transform: scale(0.7);
-	-moz-transform-origin: 0 0;
-	-o-transform: scale(.7);
-	-o-transform-origin: 0 0;
-	-webkit-transform: scale(.7);
-	-webkit-transform-origin: 0 0;
-	
-
-}
-</style>
         <link rel="stylesheet" href="fancybox/jquery.fancybox.css" type="text/css" media="screen" />
         <script type="text/javascript" src="fancybox/jquery.fancybox.pack.js"></script>
 
     </head>
-    <body>
-      <iframe name="peopleframe" id="poepleframe" src="people_frame.php" width="1024" height="730" frameborder="0"></iframe>
-    </body>
+    
+    
+
+
+<title>Gallery</title>
+
+<?php
+	require_once("formtools/global/api/api.php");
+	ft_api_clear_form_sessions();
+?>
+
+</head>
+
+<body>
+
+
+<div id="mainCanvas">
+
+	<div id="row1">
+		<?php include("peopleLoops/firstLoop.php"); ?> 
+	</div><!--row1-->
+
+	
+	<div id="row2">
+		<?php include("peopleLoops/secondLoop.php"); ?>	
+	</div><!--row2-->
+	
+	<div id="row3">
+		<?php include("peopleLoops/thirdLoop.php"); ?>			
+	</div><!--row3-->
+	<div id="navbar">
+		<div id="prev"></div>
+		<a href="http://localhost/~lucaszw/TEDxUW/people.php"><div id="reload"></div></a>
+		<div id="next"></div>
+	</div><!--navBar-->
+	
+	<?php
+		for ($i = 1; $i <= 21 ; $i ++){ ?>
+		<script>
+		
+		$('<?php echo "#person".$i?>').cycle({ 
+    fx:      'scrollRight', 
+     next:   '#next', 
+    prev:	'#prev',
+    timeout:  0, 
+     easing:  'easeInOutBack'
+
+});
+
+            $('.fancybox').fancybox({
+               'transitionIn'	:	'elastic',
+		'transitionOut'	:	'elastic',
+		'speedIn'		:	600, 
+		'speedOut'		:	200, 
+		'overlayShow'	:	true
+            });    
+            </script>
+	<?php } ?>
+
+
+	</div><!--mainCanvas-->
+
+	
+</body>
 </html>
+
+
+
+	
