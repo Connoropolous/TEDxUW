@@ -7,11 +7,19 @@
 	
     <link href="playgame.css" rel="stylesheet" type="text/css">
     
-     <script src="http://cdn.jquerytools.org/1.2.6/jquery.tools.min.js"></script>
+     
+	 <script src="jquery-1.7.2.min.js"></script>
+	 <script src="jquery.hammer.js"></script>
+	 <script src="html2canvas.js"></script>
+	 <!--script src="jquery.plugin.html2.canvas.js"</script>
+     <!--script src="http://cdn.jquerytools.org/1.2.6/jquery.tools.min.js"></script-->
      <script type="text/javascript" src="http://ajax.microsoft.com/ajax/jquery.validate/1.7/jquery.validate.min.js"></script>
      <script type="text/javascript" src="scripts/jquery.backgroundpos.min.js"></script>
      <script type="text/javascript" src="scripts/http.js"></script> 
-
+	 <script src="hammer.js"></script>
+     <script src="CreateCloud.js"></script>
+	 
+	 
 	<?php
 	  require_once("formtools/global/api/api.php");
 	?>
@@ -42,7 +50,8 @@
                 <script type="text/javascript" src="gameplay.js"></script>
                 <script type="text/javascript" src="scripts/wordlist.js"></script>
 				<script type="text/javascript" src="scripts/getstarted.js"></script>
-     			<script type="text/javascript" src="scripts/realizeyouridea.js"></script>         
+     			<script type="text/javascript" src="scripts/realizeyouridea.js"></script>
+				<script type="text/javascript" src="CreateCloud.js"></script>				
                 
              <div id="gameTitleDiv">
              		<div id="explainDonate"></div>
@@ -50,6 +59,7 @@
              		<div class="clearfloat"></div>
              </div>
              <div id="formDiv">
+			 
              	<h1 class="title">Define your <span class="red">edge</span></h1>
                 <p class="explanation">This installation is designed to help you identify and explore what gives you an edge. Choose words that you feel <br><span class="red">connect with your successes or potential.</span></p>
              	<form name="emailForm" method="GET" action="/" id="myform" autocomplete="off">
