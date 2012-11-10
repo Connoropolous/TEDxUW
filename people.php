@@ -2,116 +2,86 @@
 <html>
 <head>
 
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
+        
 <meta name="apple-mobile-web-app-capable" content="yes" />
 <meta name="viewport" content="user-scalable=no, width=device-width" />
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <link href="people.css" rel="stylesheet" type="text/css">
 <script src="http://code.jquery.com/jquery-1.6.3.min.js"></script>
 <script src="scripts/OceanIdeas.js" type="text/javascript"></script>
+<script src="scripts/jquery.easing.1.3.js" type="text/javascript"></script>
+
+<script src="peopleLoops/jquery.cycle.all.js" type="text/javascript"></script>
+
+<head>
+        <link rel="stylesheet" href="fancybox/jquery.fancybox.css" type="text/css" media="screen" />
+        <script type="text/javascript" src="fancybox/jquery.fancybox.pack.js"></script>
+
+    </head>
+    
+    
+
+
 <title>Ocean</title>
+
 <?php
 	require_once("formtools/global/api/api.php");
 	ft_api_clear_form_sessions();
 ?>
+
 </head>
 
 <body>
-  <!--[if lte IE 7]>
-  <iframe src="ie7-upgrade/index.php" frameborder="no" style="height: 90px; width: 100%; border: none;"  scrolling="no" ></iframe>
-  <![endif]-->
 
-<script type="text/javascript"> 
 
-var mousex;
-var mousey; 
+<div id="mainCanvas">
 
-$(document).ready(function(){
-   $(document).mousemove(function(e){
-      mousex = e.pageX;
-	  mousey = e.pageY;
-   });
-    
-   $(document).touchmove(function(e){
-	  e.preventDefault();
-	  var touch = e.touches[0];
-	  mousex = touch.pageX;
-	  mousey = touch.pageY;
-   });
-   
-})
+	<div id="row1">
+		<?php include("peopleLoops/firstLoop.php"); ?> 
+	</div><!--row1-->
 
-function toggleText(ideaID) {
-		text1 = "content" + ideaID;
-		text2 = "#content" + ideaID;
-		
-		
-		myObject = document.getElementById(text1);
-		myObjectVB = myObject.style.display;
-		
-		switch (myObjectVB) {
-			case "block":
-				$(text2).fadeOut('slow', function() {				
-					$(text2).css('display', 'none');				
-				});
-				this.ocean.entities[ideaID-1].status = "free";	 			
-				break;
-		
-			case "none":
-				$(text2).fadeIn('slow', function() {				
-					$(text2).css('display', 'block');				
-				}); 
-				this.ocean.entities[ideaID-1].status = "still";			
-				break;
-		}
-		
-}
-
-function grabIdea(ideaID, e) {
-		e.preventDefault();
-		this.ocean.entities[ideaID-1].status = "mousedown";
-}
-
-function dropIdea(ideaID, e) {
-		e.preventDefault(); 
-		this.ocean.entities[ideaID-1].status = "free";
-}
-
-</script>
-
-<?php	
-	$ideas = array();
 	
-	$num_deleted = ft_api_delete_unfinalized_submissions(1, true);
+	<div id="row2">
+		<?php include("peopleLoops/secondLoop.php"); ?>	
+	</div><!--row2-->
 	
-	$num_submissions = ft_api_show_submission_count(1);
-
-?>
-<br>
-<br>
-<?php
-	$ideas = ft_api_get_finalized_submissions(1);
+	<div id="row3">
+		<?php include("peopleLoops/thirdLoop.php"); ?>			
+	</div><!--row3-->
+	<div id="navbar">
+		<div id="prev"></div>
+		<a href="http://localhost/~lucaszw/TEDxUW/people.php"><div id="reload"></div></a>
+		<div id="next"></div>
+	</div><!--navBar-->
 	
-	for ($i = 1; $i <= $num_submissions; $i++) {
-		$idea = $ideas[$i - 1];
+	<?php
+		for ($i = 1; $i <= 21 ; $i ++){ ?>
+		<script>
 		
-	?> <div class="person" id="person<? echo $i ?>">
-    		<div class="personImage">
-            	<img src="images/anonymous.jpg" />
-                <div class="ideaName"><?php echo $idea["username"]; ?></div>
-            </div>
-            <div class="toggleContent" id="content<?php echo $i ?>">
-                <div class="ideaTitle">
-                    <h2><?php echo $idea["username"]; ?>'s Idea</h2>
-                </div>
-                <div class="ideaContent">
-                    <div class="ideaIdea"><h2><?php echo $idea["useredge"]; ?></h2></div>
-                    <div class="ideaQueries"><h3>Queries: <?php echo $idea["usercloud"]; ?></h3></div>
-                </div>
-            </div>
-        </div>
-        <script type="text/javascript"> 
-        </script>
-	<?php }?>
+		$('<?php echo "#person".$i?>').cycle({ 
+    fx:      'scrollRight', 
+     next:   '#next', 
+    prev:	'#prev',
+    timeout:  0, 
+     easing:  'easeInOutBack'
+
+});
+
+            $('.fancybox').fancybox({
+               'transitionIn'	:	'elastic',
+		'transitionOut'	:	'elastic',
+		'speedIn'		:	600, 
+		'speedOut'		:	200, 
+		'overlayShow'	:	true
+            });    
+            </script>
+	<?php } ?>
+
+
+	</div><!--mainCanvas-->
+
+	
 </body>
 </html>
 
