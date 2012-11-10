@@ -35,7 +35,7 @@ function organizeCloud() {
 			ZoomWrapper.appendChild(zoomprops);
 		}
 		
-		document.getElementById('formDiv').appendChild(ZoomWrapper);
+		$('#game').prepend(ZoomWrapper);
 		
 		$(function(){
         var zoom = new ZoomView('#zoom1','#zoom1 :first');

@@ -34,14 +34,22 @@ $(function(){
         }
 
         for(var d = 0; d<this.drag.length; d++) {
-          var left = $(this.drag[d].el).offset().left - 125.5; //adjustments for canvas
-          var top = $(this.drag[d].el).offset().top - 8;
+          var left = $(this.drag[d].el).position().left; //adjustments for canvas
+          var top = $(this.drag[d].el).position().top;
 
-          var x_offset = -(this.lastDrag.pos.x - this.drag[d].pos.x);
-          var y_offset = -(this.lastDrag.pos.y - this.drag[d].pos.y);
+		 console.log('left:' + left);
+		 console.log('top:' + top);
 
-          left = left + x_offset;
-          top = top + y_offset;
+		  //console.log('last drag x:' + this.lastDrag.pos.x);
+		  //console.log('this drag x:' + this.drag[d].pos.x);
+
+          //var x_offset = -(this.lastDrag.pos.x - this.drag[d].pos.x);
+          //var y_offset = -(this.lastDrag.pos.y - this.drag[d].pos.y);
+
+          //left = left + x_offset;
+		 // console.log('left offset:' + x_offset);
+          //top = top + y_offset;
+		  //console.log('top offset:' + y_offset);
 
           this.lastDrag = this.drag[d];
 

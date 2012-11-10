@@ -66,10 +66,9 @@ h1.title { font-weight:normal; font-size: 85px; margin-top: 0;}
 .logo { margin:50px 0px; }
 
 #formDiv {
-	width:924px;
-	height:250px;
-	z-index:1;
+	z-index:10;
 	padding: 10px;
+	position: absolute;
  }
  	   
 	  #myform {
@@ -181,9 +180,11 @@ h1.title { font-weight:normal; font-size: 85px; margin-top: 0;}
 }
 	
 #zoomwrapper {
-	height: 600px;
-	width: 600px;
-	overflow: hidden;   
+	height: 768px;
+	width: 1024px;
+	overflow: hidden; 
+	position:absolute;  
+	z-index:1;
 }
 		  
 .polaroid{
@@ -192,7 +193,7 @@ h1.title { font-weight:normal; font-size: 85px; margin-top: 0;}
 	-moz-box-shadow: 0px 2px 15px #333;
 	-webkit-box-shadow:	0px 2px 15px #333;
 	font-family:"Helvetica";
-	font-size:24px;
+	font-size:40px;
 	color:#FFFFFF;
 	text-shadow:#333;
 }
