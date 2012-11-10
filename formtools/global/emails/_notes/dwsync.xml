@@ -4,4 +4,8 @@
 <file name="forget_password_subject.tpl" server="ftp.householdasecology.org//public_html/indigodesign.me/game/" local="129606462780000000" remote="129606574200000000" />
 <file name="installed.tpl" server="ftp.householdasecology.org//public_html/indigodesign.me/game/" local="129606462780000000" remote="129606574200000000" />
 <file name="installed_subject.tpl" server="ftp.householdasecology.org//public_html/indigodesign.me/game/" local="129606462780000000" remote="129606574200000000" />
+<file name="forget_password.tpl" server="ftp.householdasecology.org" local="129805408840000000" remote="129969729600000000" />
+<file name="forget_password_subject.tpl" server="ftp.householdasecology.org" local="129805408840000000" remote="129969729600000000" />
+<file name="installed.tpl" server="ftp.householdasecology.org" local="129805408840000000" remote="129969729600000000" />
+<file name="installed_subject.tpl" server="ftp.householdasecology.org" local="129805408840000000" remote="129969729600000000" />
 </dwsync>

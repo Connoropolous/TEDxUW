@@ -14,4 +14,19 @@
 <file name="page_public_view_omit_list.php" server="ftp.householdasecology.org//public_html/indigodesign.me/game/" local="129606462780000000" remote="129606573600000000" />
 <file name="page_views.php" server="ftp.householdasecology.org//public_html/indigodesign.me/game/" local="129606462780000000" remote="129606573600000000" />
 <file name="submissions.php" server="ftp.householdasecology.org//public_html/indigodesign.me/game/" local="129606573600000000" remote="129606573600000000" />
+<file name="delete_form.php" server="ftp.householdasecology.org" local="129805408840000000" remote="129969729000000000" />
+<file name="edit.php" server="ftp.householdasecology.org" local="129805408840000000" remote="129969729000000000" />
+<file name="edit_submission.php" server="ftp.householdasecology.org" local="129805408840000000" remote="129969729000000000" />
+<file name="edit_submission__code.php" server="ftp.householdasecology.org" local="129805408840000000" remote="129969729000000000" />
+<file name="index.php" server="ftp.householdasecology.org" local="129805408840000000" remote="129969729000000000" />
+<file name="page_edit_email.php" server="ftp.householdasecology.org" local="129805408840000000" remote="129969729000000000" />
+<file name="page_edit_view.php" server="ftp.householdasecology.org" local="129805408840000000" remote="129969729000000000" />
+<file name="page_emails.php" server="ftp.householdasecology.org" local="129805408840000000" remote="129969729000000000" />
+<file name="page_email_settings.php" server="ftp.householdasecology.org" local="129805408840000000" remote="129969729000000000" />
+<file name="page_fields.php" server="ftp.householdasecology.org" local="129805408840000000" remote="129969729000000000" />
+<file name="page_main.php" server="ftp.householdasecology.org" local="129805408840000000" remote="129969729000000000" />
+<file name="page_public_form_omit_list.php" server="ftp.householdasecology.org" local="129805408840000000" remote="129969729000000000" />
+<file name="page_public_view_omit_list.php" server="ftp.householdasecology.org" local="129805408840000000" remote="129969729000000000" />
+<file name="page_views.php" server="ftp.householdasecology.org" local="129805408840000000" remote="129969729000000000" />
+<file name="submissions.php" server="ftp.householdasecology.org" local="129805408840000000" remote="129969729000000000" />
 </dwsync>
