@@ -33,7 +33,9 @@
     		
             <a href="<?php echo $photourl; ?>" class="fancybox" title="<?php echo $idea[$j]["username"]?>" rel="gallery"><img class= "personImage"src="<?php echo $photourl; ?>" 
             style="width: <?php echo $imageSizes[$i-1]."px"?>; height:<?php echo $imageSizes[$i-1]."px"?>;
-        
+            
+            
+	        
 	        
             "/></a>
 	            	<?php } ?>
