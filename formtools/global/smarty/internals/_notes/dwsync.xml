@@ -22,4 +22,26 @@
 <file name="core.write_compiled_include.php" server="ftp.householdasecology.org//public_html/indigodesign.me/game/" local="129606462780000000" remote="129606574800000000" />
 <file name="core.write_compiled_resource.php" server="ftp.householdasecology.org//public_html/indigodesign.me/game/" local="129606462780000000" remote="129606574800000000" />
 <file name="core.write_file.php" server="ftp.householdasecology.org//public_html/indigodesign.me/game/" local="129606462780000000" remote="129606574800000000" />
+<file name="core.assemble_plugin_filepath.php" server="ftp.householdasecology.org" local="129805408840000000" remote="129969729600000000" />
+<file name="core.assign_smarty_interface.php" server="ftp.householdasecology.org" local="129805408840000000" remote="129969729600000000" />
+<file name="core.create_dir_structure.php" server="ftp.householdasecology.org" local="129805408840000000" remote="129969729600000000" />
+<file name="core.display_debug_console.php" server="ftp.householdasecology.org" local="129805408840000000" remote="129969729600000000" />
+<file name="core.get_include_path.php" server="ftp.householdasecology.org" local="129805408840000000" remote="129969729600000000" />
+<file name="core.get_microtime.php" server="ftp.householdasecology.org" local="129805408840000000" remote="129969729600000000" />
+<file name="core.get_php_resource.php" server="ftp.householdasecology.org" local="129805408840000000" remote="129969729600000000" />
+<file name="core.is_secure.php" server="ftp.householdasecology.org" local="129805408840000000" remote="129969729600000000" />
+<file name="core.is_trusted.php" server="ftp.householdasecology.org" local="129805408840000000" remote="129969729600000000" />
+<file name="core.load_plugins.php" server="ftp.householdasecology.org" local="129805408840000000" remote="129969729600000000" />
+<file name="core.load_resource_plugin.php" server="ftp.householdasecology.org" local="129805408840000000" remote="129969729600000000" />
+<file name="core.process_cached_inserts.php" server="ftp.householdasecology.org" local="129805408840000000" remote="129969729600000000" />
+<file name="core.process_compiled_include.php" server="ftp.householdasecology.org" local="129805408840000000" remote="129969729600000000" />
+<file name="core.read_cache_file.php" server="ftp.householdasecology.org" local="129805408840000000" remote="129969729600000000" />
+<file name="core.rmdir.php" server="ftp.householdasecology.org" local="129805408840000000" remote="129969729600000000" />
+<file name="core.rm_auto.php" server="ftp.householdasecology.org" local="129805408840000000" remote="129969729600000000" />
+<file name="core.run_insert_handler.php" server="ftp.householdasecology.org" local="129805408840000000" remote="129969729600000000" />
+<file name="core.smarty_include_php.php" server="ftp.householdasecology.org" local="129805408840000000" remote="129969729600000000" />
+<file name="core.write_cache_file.php" server="ftp.householdasecology.org" local="129805408840000000" remote="129969729600000000" />
+<file name="core.write_compiled_include.php" server="ftp.householdasecology.org" local="129805408840000000" remote="129969729600000000" />
+<file name="core.write_compiled_resource.php" server="ftp.householdasecology.org" local="129805408840000000" remote="129969729600000000" />
+<file name="core.write_file.php" server="ftp.householdasecology.org" local="129805408840000000" remote="129969729600000000" />
 </dwsync>

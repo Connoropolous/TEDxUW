@@ -138,13 +138,25 @@ var eListener1 = null;
 var eListener2 = null;
 
 GameEngine.prototype.startInput = function() {
-    var getXandY = function(e) {
+    
+	var that = this;
+	
+	var getXandY = function(e) {
         var x =  e.clientX - that.ctx.canvas.getBoundingClientRect().left - (that.ctx.canvas.width/2);
         var y = e.clientY - that.ctx.canvas.getBoundingClientRect().top - (that.ctx.canvas.height/2);
         return {x: x, y: y};
     }
-    
-    var that = this;
+	
+	// create a function to pass touch events and coordinates to drawer
+	var getTouchXandY = function(event){
+	   // get the touch coordinates
+	   var coors = {
+		  x: event.targetTouches[0].pageX - that.ctx.canvas.getBoundingClientRect().left - (that.ctx.canvas.width/2),
+		  y: event.targetTouches[0].pageY - that.ctx.canvas.getBoundingClientRect().top - (that.ctx.canvas.height/2)
+	   };
+	   // pass the coordinates to the appropriate handler
+	   that.mouse = coors;
+	}
     
     this.ctx.canvas.addEventListener("click", function(e) {
 		console.log("clicked");
@@ -157,6 +169,11 @@ GameEngine.prototype.startInput = function() {
 		e.preventDefault();
         that.mouse = getXandY(e);
     }, false);
+	
+	// attach the touchstart, touchmove, touchend event listeners.
+	this.ctx.canvas.addEventListener('touchstart',getTouchXandY, false);
+	this.ctx.canvas.addEventListener('touchmove',getTouchXandY, false);
+	this.ctx.canvas.addEventListener('touchend',getTouchXandY, false);
 }
 
 GameEngine.prototype.addEntity = function(entity) {

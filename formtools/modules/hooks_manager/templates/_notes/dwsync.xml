@@ -5,4 +5,9 @@
 <file name="help.tpl" server="ftp.householdasecology.org//public_html/indigodesign.me/game/" local="129515794200000000" remote="129515794200000000" />
 <file name="index.tpl" server="ftp.householdasecology.org//public_html/indigodesign.me/game/" local="129515794200000000" remote="129515794200000000" />
 <file name="settings.tpl" server="ftp.householdasecology.org//public_html/indigodesign.me/game/" local="129515794200000000" remote="129515794200000000" />
+<file name="add.tpl" server="ftp.householdasecology.org" local="129515794200000000" remote="129969730800000000" />
+<file name="edit.tpl" server="ftp.householdasecology.org" local="129515794200000000" remote="129969730800000000" />
+<file name="help.tpl" server="ftp.householdasecology.org" local="129515794200000000" remote="129969730800000000" />
+<file name="index.tpl" server="ftp.householdasecology.org" local="129515794200000000" remote="129969730800000000" />
+<file name="settings.tpl" server="ftp.householdasecology.org" local="129515794200000000" remote="129969730800000000" />
 </dwsync>

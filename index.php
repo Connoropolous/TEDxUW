@@ -28,6 +28,11 @@
                       gameFinished = true;
                   }
               }
+			  
+			  // prevent elastic scrolling
+			  document.body.addEventListener('touchmove',function(event){
+				event.preventDefault();
+			  },false);	// end body:touchmove
      </script>
     <div id="WelcomeAndPlay">         
         
@@ -55,6 +60,7 @@
                 	<input id="form1checkbox" type="checkbox" name="photoPermission" ></input>
                 	<input type="submit" class="submit" name="emailSubmit" id="email" value="Get Started" ></input>
              	</form>
+                <img class="logo" src="/images/TEDxUW.png" width="443" height="100" />
              </div>           
         </div>
     </div>
