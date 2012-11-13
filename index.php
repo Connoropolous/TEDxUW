@@ -49,7 +49,7 @@
              	
                 <script type="text/javascript" src="gameplay.js"></script>
                 <script type="text/javascript" src="scripts/wordlist.js"></script>
-				<script type="text/javascript" src="scripts/getstarted.js"></script>
+				<script type="text/javascript" src="scripts/getstarted1.js"></script>
      			<script type="text/javascript" src="scripts/realizeyouridea.js"></script>
 				<script type="text/javascript" src="CreateCloud.js"></script>				
                 
@@ -61,7 +61,7 @@
              <div id="formDiv">
 			 
              	<h1 class="title">Define your <span class="red">edge</span></h1>
-                <p class="explanation">This installation is designed to help you identify and explore what gives you an edge. Choose words that you feel <br><span class="red">connect with your successes or potential.</span></p>
+                <p class="explanation">This installation is designed to help you identify and explore what gives you an edge. You'll be collecting words that you feel <br><span class="red">connect with your successes or potential.</span></p>
              	<form name="emailForm" method="GET" action="/" id="myform" autocomplete="off">
                 	<label for="form1input">Enter your email address to begin:</label>
                 	<input id="form1input" class="input" type="text" name="email" ></input>

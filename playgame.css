@@ -29,6 +29,8 @@ a, a:hover, a.active {color: #FFF; text-decoration:none; }
 img {border:none;}
 
 h1.title { font-weight:normal; font-size: 85px; margin-top: 0;}
+h2 { font-size:40px; }
+.instr { font-size:30px; }
 
 .red { color:#ed3624; font-weight:bold; }
 
@@ -63,7 +65,7 @@ h1.title { font-weight:normal; font-size: 85px; margin-top: 0;}
 
 #form1input { margin:30px 0 30px 20px; }
 
-.logo { margin:50px 0px; }
+.logo { margin:188px 0 0 0; }
 
 #formDiv {
 	z-index:10;
@@ -100,8 +102,8 @@ h1.title { font-weight:normal; font-size: 85px; margin-top: 0;}
 	   
 	  .submit {
 		  position:absolute;
-		  top:445px;
-		  left:700px;
+		  top:564px;
+		  left:825px;
 		  display:block; 
 		  height:150px;
 		  width:150px;
@@ -117,6 +119,9 @@ h1.title { font-weight:normal; font-size: 85px; margin-top: 0;}
 		  background-position: 0px 0px;  
 	  }
 	  
+label.error { display:none !important; }
+input.error { border: 3px solid #ed3624; }
+
 .myform label {margin:none;}
 
 #formUsercloudHidden {display:none; }
@@ -130,53 +135,52 @@ h1.title { font-weight:normal; font-size: 85px; margin-top: 0;}
 #formconcept8Hidden {display: none;}
 #formPhotoPermissionHidden {display: none;}
 #formUseredgeNotHidden {display: block; width: 422px; margin-top:15px; height:24px; font-size:18px;}
-#formUsernameNotHidden {display: block; width: 422px; margin-top:15px; height:24px; font-size:18px;}
+#formUsernameNotHidden {display: none; width: 422px; margin-top:15px; height:24px; font-size:18px;}
 #formUseremailHidden {display: none;}
-#formSubmitNotHidden {
-	margin-top:15px;
-	display:block;
-	border:none;
-	font-size: 30px;
-	font-family:'HelveticaLTStdRoman', Helvetica, sans-serif;
-	cursor:pointer;
-	}
+#finalUser .submit { display:none; }
+
+#formDiv .edgecloud { border:1px solid white; }
 	
+	
+.canvasInstr { opacity:0; margin:10px 0 0 -10px; }
+
 #zoom1 {
-
-}
-
-#zoom2 {
 	top:50px;
 }
 
+#zoom2 {
+	top:120px;
+}
+
 #zoom3 {
-	top:100px;
+	top:190px;
 }
 
 #zoom4 {
-	top:150px;
+	top:260px;
 }
 
 #zoom5 {
-	top:200px;
+	top:330px;
 }
 
 #zoom6 {
-	top:250px;
+	top:400px;
 }
 
 #zoom7 {
-	top:300px;
+	top:470px;
 }
 
 #zoom8 {
-	top:350px;
+	top:540px;
 }
 
 .zoomProps{	  
 	height: 0px;
 	width: 0px;
 	position:absolute;
+	left:15px;
 }
 	
 #zoomwrapper {
@@ -193,7 +197,7 @@ h1.title { font-weight:normal; font-size: 85px; margin-top: 0;}
 	-moz-box-shadow: 0px 2px 15px #333;
 	-webkit-box-shadow:	0px 2px 15px #333;
 	font-family:"Helvetica";
-	font-size:40px;
+	font-size:65px;
 	color:#FFFFFF;
 	text-shadow:#333;
 }

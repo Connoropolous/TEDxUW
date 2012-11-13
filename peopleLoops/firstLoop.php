@@ -23,7 +23,8 @@
             
             	
             	<?php if(isset($idea[$j]["photourl"]) == false ){
-    				$photourl = "images/anonymous.jpg";
+    				#$photourl = "images/anonymous.jpg";
+					$photourl = $idea[$j]["usercloud"];
     			}
     			else {
 	    			$photourl = $idea[$j]["photourl"];

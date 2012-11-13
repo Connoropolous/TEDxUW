@@ -2,8 +2,12 @@
 
 var starters = [];
 
+
+starters.push("Alex");
+starters.push("rocks");
+
 // iniitialize starters
-starters.push("awe");
+/*starters.push("awe");
 starters.push("inspire");
 starters.push("enlighten");
 starters.push("unexpected");
@@ -105,4 +109,4 @@ starters.push("politics");
 starters.push("iphone");
 starters.push("Star Trek");
 starters.push("faith");
-starters.push("futurism");
+starters.push("futurism");*/

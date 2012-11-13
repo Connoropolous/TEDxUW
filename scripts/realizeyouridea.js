@@ -2,6 +2,7 @@
 //
 // A-HA! SECTION
 		createCloud=document.createElement('button');
+		createCloud.setAttribute('class','submit');
 		createCloud.setAttribute('value','submit');
 		createCloud.setAttribute('onclick','createEdge()');
 		
@@ -14,12 +15,6 @@
 function organizeCloud() {	
 		gameFinished = true;
         mouseCanMove = false;
-		$("#formDiv").html("This is the page where you organize your cloud.");
-		
-		//usercloudVal = canvas.toDataURL();
-		//usercloud.setAttribute('value',usercloudVal);
-		
-		document.getElementById('formDiv').appendChild(createCloud);
 		
 		for (var i=1; i<=8; i++)
 		{
@@ -50,7 +45,10 @@ function organizeCloud() {
 		
 		updatetextfromarray(collectedWords);
 		
-		$('#formDiv').fadeIn('slow', function(){});
+		$('#formDiv').css('display','block');
+		
+		$("#formDiv").html("<img src='/images/Canvas_instruction.png' class='canvasInstr' />");
+		$('.canvasInstr').animate({ opacity:0.8 },2000).delay(7000).animate({ opacity:0 },2000, function() { $('#formDiv').html(""); document.getElementById('formDiv').appendChild(createCloud); });
 }
 	
 function editNodeText(id, newText)
@@ -85,12 +83,12 @@ function createEdge() {
 	usercloudVal = wordcloud.toDataURL();
 	usercloud.setAttribute('value',usercloudVal);
 	
-	document.getElementById('formDiv').removeChild(createCloud);
+	$('#zoomwrapper').remove();
+	createCloud.setAttribute('onclick','finalize()');
 
-	$("#formDiv").html("This is the page where you identify your edge.");
+	$("#formDiv").html("<h2 class='red'>What's Your Edge?</h2>Reflect on your canvas and describe what gives you an edge.<img src='" + usercloudVal + "' class='edgecloud' width='500' height='300' />");
+	document.getElementById('formDiv').appendChild(createCloud);
 	document.getElementById('formDiv').appendChild(UserSubmitForm);
-	
-	$("#gameTitleDiv").fadeIn('slow', function(){});
 	
 	$("#finalUser").validate({
 			debug: false,
@@ -107,5 +105,12 @@ function createEdge() {
 				document.getElementById('finalUser').submit();		
 			}
 		});
+}
 
+function finalize() {
+	document.getElementById('formDiv').removeChild(createCloud);
+	$('#finalUser .submit').css('display','block');
+	$('#formUseredgeNotHidden').fadeOut('fast', function() {
+		$('#formUsernameNotHidden').fadeIn('fast');
+	});
 }

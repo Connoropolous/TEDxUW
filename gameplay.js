@@ -480,7 +480,7 @@ Streme.prototype.update = function() {
 	}
 	
 	// add new concepts
-	if (words.length > 0) {
+	if (words.length > 0 && mouseCanMove) {
 		if (((this.timer.gameTime > 2 && this.lastConceptAddedAt == null) || (this.timer.gameTime - this.lastConceptAddedAt) > 2) && !gameFinished) {
 			
 			if ((words.length % 4) == 0) {
