@@ -3,8 +3,16 @@
 var starters = [];
 
 
-starters.push("Alex");
+starters.push("TEDxUW");
 starters.push("rocks");
+starters.push("5 days");
+starters.push("Boo yeah!");
+starters.push("agile");
+starters.push("Friendly");
+starters.push("creative");
+starters.push("Edge");
+starters.push("Interactive");
+starters.push("clever");
 
 // iniitialize starters
 /*starters.push("awe");
