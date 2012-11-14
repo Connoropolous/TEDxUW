@@ -21,8 +21,6 @@
     </head>
     
     
-
-
 <title>Gallery</title>
 
 <?php
@@ -40,7 +38,6 @@
 	<div id="row1">
 		<?php include("peopleLoops/firstLoop.php"); ?> 
 	</div><!--row1-->
-
 	
 	<div id="row2">
 		<?php include("peopleLoops/secondLoop.php"); ?>	
