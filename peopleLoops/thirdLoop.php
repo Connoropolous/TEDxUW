@@ -29,9 +29,17 @@
 	    			$photourl = $idea[$j]["photourl"];
 	
     			}
+    			
+    			 if(isset($idea[$j]["username"]) == false ){
+    			$fancyclass = "noclass";
+    			}else {
+	    			$fancyclass = "fancybox";
+    			}
+    			
+    			
     			?>
             
-            	 <a href="<?php echo $photourl; ?>" class="fancybox" title="<?php echo $idea[$j]["username"]?>" rel="gallery"><img src="<?php echo $photourl; ?>"
+            	 <a href="<?php echo $photourl; ?>" class="<?php echo $fancyclass?>" title="<?php echo $idea[$j]["username"]?>" rel="gallery"><img src="<?php echo $photourl; ?>"
             	 class="personImage" style="width:<?php echo $imageSizes[$i-15]."px"?>;height:<?php echo $imageSizes[$i-15]."px"?>;"
             	 
             	
