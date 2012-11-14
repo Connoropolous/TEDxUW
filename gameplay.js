@@ -316,9 +316,9 @@ Glimmer.prototype.constructor = Glimmer;
   {  
   	  this.radius = 40 + (this.conceptSpotWords.length*2)
 	  
-	  if (this.game.mouse && mouseCanMove) {  
-        this.vx = (this.game.mouse.x-this.x)/15;
-        this.vy = (this.game.mouse.y-this.y)/15;
+	  if (this.game.mouse && mouseCanMove) { 
+        	this.vx = (this.game.mouse.x-this.x)/15;
+        	this.vy = (this.game.mouse.y-this.y)/15;
       }
 	  
 	  else if (!mouseCanMove) {
@@ -338,8 +338,25 @@ Glimmer.prototype.constructor = Glimmer;
 	
       }
 	  
-	  this.x+=this.vx;			
-	  this.y+=this.vy;	
+	  if (this.game.click) {
+		  if ( !(this.game.click.x < -400 && this.game.click.y < (-310 + (this.conceptSpotWords.length*50)))) {
+			this.x+=this.vx;			
+			this.y+=this.vy;
+		  }
+		  else if (this.conceptSpotWords.length > 0 && this.game.click.x < -400 && this.game.click.y < (-310 + (this.conceptSpotWords.length*50))) {
+		  	for (var i = 0; i < this.conceptSpotWords.length; i++) {
+				var wordX = -510;
+				var wordY = -300 + (i * 50);
+				if (this.game.click.x > wordX && this.game.click.x < wordX + 30 && this.game.click.y < wordY && this.game.click.y > wordY - 30) {
+					this.conceptSpotWords.splice(i, 1);
+				}
+			}	  
+		  }
+	  }
+	  else {
+		 this.x+=this.vx;			
+		 this.y+=this.vy; 
+	  }
 	  
 	  Entity.prototype.update.call(this);
   }
@@ -351,11 +368,14 @@ Glimmer.prototype.constructor = Glimmer;
 		var y = this.y - this.radius;
 		
 	    for (var i = 0; i < this.conceptSpotWords.length; i++) {
-			var wordX = this.x + 56;
-			var wordY = this.y - 56 + (i * 15);
-			ctx.fillStyle = "white";
-			ctx.font = "1em 'HelveticaLTStdRoman'";
+			var wordX = -500;
+			var wordY = -310 + (i * 50);
+			ctx.fillStyle = "#ed3624";
+			ctx.font = "2em 'HelveticaLTStdRoman'";
 			ctx.fillText(this.conceptSpotWords[i], wordX, wordY);
+			ctx.fillStyle = "white";
+			ctx.font = "2em 'HelveticaLTStdRoman'";
+			ctx.fillText('x', wordX-10, wordY+10);
 		}
 		
 		ctx.drawImage(this.sprite, x, y, this.radius*2, this.radius*2);
@@ -511,7 +531,7 @@ Streme.prototype.update = function() {
 	// end game when...
     if ((game.glimmer.conceptSpotWords.length == 8 && !gameFinished) || gameFinished) {
 		if (!doneSwitch) {
-			$('#Surface').remove()
+			$('#Surface').fadeOut('fast');
 			collectedWords = game.glimmer.conceptSpotWords;
 			organizeCloud();
 			doneSwitch = true;
@@ -552,5 +572,3 @@ ASSET_MANAGER.queueDownload('images/LoopStream.png');
 ASSET_MANAGER.queueDownload('images/LoopStream_peters2.png');
 ASSET_MANAGER.queueDownload('images/Xicon.png');
 ASSET_MANAGER.queueDownload('images/Picture1.png');
-
-

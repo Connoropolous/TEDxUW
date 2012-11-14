@@ -81,7 +81,7 @@ for (var i = 1; i < 9; i++) {
 	userSubmit=document.createElement('input');
 	userSubmit.setAttribute('name','finalSubmit');
 	userSubmit.setAttribute('type','submit');
-	//userSubmit.setAttribute('class', 'donate');
+	userSubmit.setAttribute('class', 'submit');
 	userSubmit.setAttribute('value','Submit!');
 	userSubmit.setAttribute('id','formSubmitNotHidden');
 
@@ -128,7 +128,6 @@ function WelcomeScreen() {
 			},
 			submitHandler: function(form) {
 				game.start();
-				mouseCanMove = true;
 				
 				var i = 0;
 				var tempquery1 = $('#form1input').attr('value');
@@ -138,9 +137,30 @@ function WelcomeScreen() {
 				if ( tempquery2 === "checked" )  {
 					photoPermission.setAttribute('checked',tempquery2);
 				}
-				
-				document.getElementById('formDiv').innerHTML = '';
-				$('#formDiv').css('display','none');
+					
+				//mouseCanMove = true;			
+				$('#formDiv').html("<h2 class='red'>Welcome to the Word Stream</h2><div class='instr'>Here's your instructions...</div>");
+				$('#formDiv .instr').html("Here's your instructions...");
+				setTimeout (function() { 
+					$('#formDiv .instr').html("In a moment, you'll be able to tap or drag the red X around the screen...");
+					setTimeout (function() { 
+						$('#formDiv .instr').html("As you move, pick up words that resonate with your successes or potential...");
+						setTimeout (function() { 
+							$('#formDiv .instr').html("...by hovering over their red dot. Avoid words you don't like!");
+							setTimeout (function() { 
+								$('#formDiv .instr').html("You have to grab 8 words. But take your time, and use your intuition!");
+								setTimeout (function() { 
+									$('#formDiv .instr').html("Have fun!");
+									setTimeout (function() { 
+										$('#formDiv').html("");
+										$('#formDiv').css('display','none');
+										mouseCanMove = true;
+									}, 2000);
+								}, 4000);
+							}, 4000);
+						}, 4000);
+					}, 4000);
+				}, 4000);
 				
 				//don't reload the page. stop that default event
 				return false;
