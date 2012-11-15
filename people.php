@@ -9,7 +9,6 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <link href="people.css" rel="stylesheet" type="text/css">
 <script src="http://code.jquery.com/jquery-1.6.3.min.js"></script>
-<script src="scripts/OceanIdeas.js" type="text/javascript"></script>
 <script src="scripts/jquery.easing.1.3.js" type="text/javascript"></script>
 
 <script src="peopleLoops/jquery.cycle.all.js" type="text/javascript"></script>

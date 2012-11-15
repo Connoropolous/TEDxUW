@@ -22,13 +22,18 @@
             	<?php for($j = 0;$j <= $k; $j++) { ?>
             
             	
-            	<?php if(isset($idea[$j]["photourl"]) == false ){
-    				#$photourl = "images/anonymous.jpg";
-					$photourl = $idea[$j]["usercloud"];
+            	<?php /*?><?php if(isset($idea[$j]["photourl"]) == false ){
+    				$photourl = "images/anonymous.jpg";
     			}
     			else {
 	    			$photourl = $idea[$j]["photourl"];
-	
+    			}
+    			?><?php */?>
+                <?php if(isset($idea[$j]["usercloud"]) == false ){
+    				$photourl = "images/anonymous.jpg";
+    			}
+    			else {
+	    			$photourl = $idea[$j]["usercloud"];
     			}
     			?>
     		
