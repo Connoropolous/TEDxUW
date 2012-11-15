@@ -1,6 +1,4 @@
-
-	
-	<?php
+<?php
 		$imageSizes = array(100, 110, 120, 130, 120, 110, 100);
 		$ideas = ft_api_get_finalized_submissions(1); ?>
 		<?php
@@ -34,9 +32,15 @@
     			else {
 	    			$photourl = $idea[$j]["usercloud"];
     			}
+    			
+    			 if(isset($idea[$j]["username"]) == false ){
+    			$fancyclass = "noclass";
+    			}else {
+	    			$fancyclass = "fancybox";
+    			}			
     			?>
             
-            	 <a href="<?php echo $photourl; ?>" class="fancybox" title="<?php echo $idea[$j]["username"]?>" rel="gallery"><img src="<?php echo $photourl; ?>"
+            	 <a href="<?php echo $photourl; ?>" class="<?php echo $fancyclass?>" title="<?php echo $idea[$j]["username"]?>" rel="gallery"><img src="<?php echo $photourl; ?>"
             	 
             	class="personImage" style="width:<?php echo $imageSizes[$i-8]."px"?>;height:<?php echo $imageSizes[$i-8]."px"?>;"
             	 
